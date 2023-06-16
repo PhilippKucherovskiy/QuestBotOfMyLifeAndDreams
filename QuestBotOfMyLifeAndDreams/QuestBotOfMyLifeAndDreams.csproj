@@ -1,0 +1,40 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.Hosting" Version="7.0.1" />
+    <PackageReference Include="Telegram.Bot" Version="19.0.0" />
+    <PackageReference Include="Telegram.Bots.Extensions.Polling" Version="5.9.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Plot\1\" />
+    <Folder Include="Plot\2\" />
+    <Folder Include="Plot\3\" />
+    <Folder Include="Plot\4\" />
+    <Folder Include="Plot\5\" />
+    <Folder Include="Plot\6\" />
+    <Folder Include="Plot\7\" />
+    <Folder Include="Plot\8\" />
+    <Folder Include="Plot\9\" />
+    <Folder Include="Plot\10\" />
+    <Folder Include="Plot\11\" />
+    <Folder Include="Plot\12\" />
+    <Folder Include="Plot\13\" />
+    <Folder Include="Plot\14\" />
+    <Folder Include="Plot\15\" />
+    <Folder Include="Plot\16\" />
+    <Folder Include="Plot\17\" />
+    <Folder Include="Plot\18\" />
+    <Folder Include="Plot\19\" />
+    <Folder Include="Plot\20\" />
+    <Folder Include="Plot\21\" />
+  </ItemGroup>
+
+</Project>
