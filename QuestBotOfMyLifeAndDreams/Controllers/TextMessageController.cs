@@ -18,7 +18,7 @@ namespace QuestBotOfMyLifeAndDreams.Controllers
             _telegramClient = telegramBotClient;
         }
 
-        public async Task Handle(Message message, CancellationToken ct)
+        public async Task Handle(Message message, CancellationToken ct) 
         {
             switch (message.Text)
             {
