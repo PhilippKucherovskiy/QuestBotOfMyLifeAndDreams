@@ -2,7 +2,6 @@
 using Telegram.Bot;
 using Telegram.Bot.Exceptions;
 using Telegram.Bot.Polling;
-using Telegram.Bot.Polling;
 using Telegram.Bot.Types;
 using Telegram.Bot.Types.Enums;
 using QuestBotOfMyLifeAndDreams.Controllers;
@@ -18,17 +17,20 @@ namespace QuestBotOfMyLifeAndDreams
         private InlineController _inlineController;
         private TextMessageController _textMessageController;
         private DefaultMessageController _defaultMessageController;
+        private GameController _gameController;
 
         public Bot(
             ITelegramBotClient telegramClient,
             InlineController inlineController,
             TextMessageController textMessageController,
-            DefaultMessageController defaultMessageController)
+            DefaultMessageController defaultMessageController,
+            GameController gameController)
         {
             _telegramClient = telegramClient;
             _inlineController = inlineController;
             _textMessageController = textMessageController;
             _defaultMessageController = defaultMessageController;
+            _gameController = gameController;
         }
 
         protected override async Task ExecuteAsync(CancellationToken stoppingToken)
