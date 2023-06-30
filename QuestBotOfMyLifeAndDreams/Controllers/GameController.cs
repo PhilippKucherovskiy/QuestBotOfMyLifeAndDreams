@@ -1,13 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Telegram.Bot.Types.ReplyMarkups;
+﻿using System.Threading.Tasks;
 using Telegram.Bot;
-using QuestBotOfMyLifeAndDreams.Services;
 using Telegram.Bot.Types;
 using Telegram.Bot.Types.Enums;
+using Telegram.Bot.Types.ReplyMarkups;
+using QuestBotOfMyLifeAndDreams.Services;
 
 namespace QuestBotOfMyLifeAndDreams.Controllers
 {
@@ -15,9 +11,9 @@ namespace QuestBotOfMyLifeAndDreams.Controllers
     {
         private readonly ITelegramBotClient _telegramClient;
         private readonly GameDictionary _gameDictionary;
-        private readonly InlineController _inlineController;
+        private readonly IInlineController _inlineController;
 
-        public GameController(ITelegramBotClient telegramBotClient, GameDictionary gameDictionary, InlineController inlineController)
+        public GameController(ITelegramBotClient telegramBotClient, GameDictionary gameDictionary, IInlineController inlineController)
         {
             _telegramClient = telegramBotClient;
             _gameDictionary = gameDictionary;
@@ -29,8 +25,6 @@ namespace QuestBotOfMyLifeAndDreams.Controllers
             if (update.Type == UpdateType.CallbackQuery && update.CallbackQuery != null)
             {
                 var callbackQuery = update.CallbackQuery;
-
-                // Handle the user's choice based on the callback data
                 await HandleUserChoice(callbackQuery);
             }
         }
@@ -40,7 +34,7 @@ namespace QuestBotOfMyLifeAndDreams.Controllers
             var blockId = callbackQuery.Data;
             var gameContent = _gameDictionary.GetGameContent(blockId);
 
-            if (gameContent.Options != null && gameContent.Options.Length > 0)
+            if (gameContent != null && !string.IsNullOrEmpty(gameContent.Text) && gameContent.Options != null && gameContent.Options.Length > 0)
             {
                 var replyMarkup = new InlineKeyboardMarkup(
                     gameContent.Options.Select(option =>
@@ -50,7 +44,7 @@ namespace QuestBotOfMyLifeAndDreams.Controllers
 
                 await _telegramClient.SendTextMessageAsync(
                     chatId: callbackQuery.Message.Chat.Id,
-                    text: "Choose an option:",
+                    text: gameContent.Text,
                     replyMarkup: replyMarkup
                 );
 

@@ -1,60 +1,54 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 
 namespace QuestBotOfMyLifeAndDreams.Services
 {
     public class GameDictionary
     {
-        private Dictionary<string, GameContent> _gameContentLookup;
+        private readonly Dictionary<string, GameContent> _gameContentLookup;
 
         public GameDictionary()
         {
-            // Initialize the game content lookup table
             _gameContentLookup = new Dictionary<string, GameContent>();
 
-            // Add the game content for each block
-            AddGameContent("Block1", new GameContent
+            // Добавьте начальное содержимое игры в конструкторе
+            var startGameContent = new GameContent
             {
-                Text = "This is the text for Block 1.",
-                ImageUrl = "photoUrl1",
+                Text = "Текст 1",
                 Options = new[]
                 {
-                new Option { Text = "Option 1A", NextBlock = "Block2" },
-                new Option { Text = "Option 1B", NextBlock = "Block3" }
-            }
-            });
+                    new Option { Text = "1", NextBlock = "Block1A" },
+                    new Option { Text = "2", NextBlock = "Block2A" }
+                }
+            };
+            AddGameContent("StartBlock", startGameContent);
 
-            AddGameContent("Block2", new GameContent
+            // Добавьте другие блоки и их содержимое по необходимости
+            var block1AContent = new GameContent
             {
-                Text = "This is the text for Block 2.",
-                ImageUrl = "photoUrl2",
-                Options = new[]
-                {
-                new Option { Text = "Option 2A", NextBlock = "Block4" },
-                new Option { Text = "Option 2B", NextBlock = "Block5" }
-            }
-            });
+                Text = "Текст 1А"
+            };
+            AddGameContent("Block1A", block1AContent);
 
-            // Add more blocks of game content...
+            var block2AContent = new GameContent
+            {
+                Text = "Текст 2А"
+            };
+            AddGameContent("Block2A", block2AContent);
+        }
+
+        public void AddGameContent(string blockId, GameContent gameContent)
+        {
+            _gameContentLookup[blockId] = gameContent;
         }
 
         public GameContent GetGameContent(string blockId)
         {
-            // Retrieve the game content based on the block ID
             if (_gameContentLookup.TryGetValue(blockId, out var gameContent))
             {
                 return gameContent;
             }
 
-            return null; // Block not found
-        }
-
-        private void AddGameContent(string blockId, GameContent gameContent)
-        {
-            _gameContentLookup[blockId] = gameContent;
+            return null;
         }
     }
 
@@ -70,5 +64,4 @@ namespace QuestBotOfMyLifeAndDreams.Services
         public string Text { get; set; }
         public string NextBlock { get; set; }
     }
-
 }

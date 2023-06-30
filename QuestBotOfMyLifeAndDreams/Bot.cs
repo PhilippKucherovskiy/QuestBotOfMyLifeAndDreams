@@ -4,10 +4,11 @@ using System.Threading;
 using System.Threading.Tasks;
 using Telegram.Bot;
 using Telegram.Bot.Exceptions;
-using Telegram.Bot.Polling;
 using Telegram.Bot.Types;
 using Telegram.Bot.Types.Enums;
+using Telegram.Bot.Polling;
 using QuestBotOfMyLifeAndDreams.Controllers;
+using QuestBotOfMyLifeAndDreams.Services;
 
 namespace QuestBotOfMyLifeAndDreams
 {
@@ -20,19 +21,22 @@ namespace QuestBotOfMyLifeAndDreams
         private TextMessageController _textMessageController;
         private DefaultMessageController _defaultMessageController;
         private GameController _gameController;
+        private GameDictionary _gameDictionary;
 
         public Bot(
             ITelegramBotClient telegramClient,
             InlineController inlineController,
             TextMessageController textMessageController,
             DefaultMessageController defaultMessageController,
-            GameController gameController)
+            GameController gameController,
+            GameDictionary gameDictionary)
         {
             _telegramClient = telegramClient;
             _inlineController = inlineController;
             _textMessageController = textMessageController;
             _defaultMessageController = defaultMessageController;
             _gameController = gameController;
+            _gameDictionary = gameDictionary;
         }
 
         protected override async Task ExecuteAsync(CancellationToken stoppingToken)
@@ -46,17 +50,15 @@ namespace QuestBotOfMyLifeAndDreams
             Console.WriteLine("Бот запущен");
         }
 
-        async Task HandleUpdateAsync(ITelegramBotClient botClient, Update update, CancellationToken cancellationToken)
+        async Task HandleUpdateAsync(ITelegramBotClient telegramClient, Update update, CancellationToken cancellationToken)
         {
-            //  Обрабатываем нажатия на кнопки  из Telegram Bot API: https://core.telegram.org/bots/api#callbackquery
+            // Обрабатываем нажатия на кнопки из Telegram Bot API: https://core.telegram.org/bots/api#callbackquery
             if (update.Type == UpdateType.CallbackQuery)
             {
                 await _gameController.Handle(new Update
                 {
                     CallbackQuery = update.CallbackQuery
                 });
-
-
 
                 return;
             }
@@ -67,10 +69,8 @@ namespace QuestBotOfMyLifeAndDreams
                 switch (update.Message!.Type)
                 {
                     case MessageType.Text:
-                        await _gameController.Handle(new Update
-                        {
-                            CallbackQuery = update.CallbackQuery
-                        });
+                        
+                        await _textMessageController.Handle(update.Message);
                         return;
                     default:
                         await _defaultMessageController.Handle(update.Message, cancellationToken);
@@ -78,6 +78,7 @@ namespace QuestBotOfMyLifeAndDreams
                 }
             }
         }
+
 
         Task HandleErrorAsync(ITelegramBotClient botClient, Exception exception, CancellationToken cancellationToken)
         {
@@ -99,4 +100,5 @@ namespace QuestBotOfMyLifeAndDreams
             return Task.CompletedTask;
         }
     }
+
 }

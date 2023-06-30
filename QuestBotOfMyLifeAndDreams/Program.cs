@@ -42,6 +42,7 @@ namespace QuestBotOfMyLifeAndDreams
             services.AddTransient<InlineController>();
             services.AddSingleton<GameDictionary>();
             services.AddTransient<GameController>();
+            services.AddTransient<IInlineController, InlineController>();
 
             // Регистрируем объект TelegramBotClient c токеном подключения
             services.AddSingleton<ITelegramBotClient>(provider => new TelegramBotClient(appSettings.BotToken));
