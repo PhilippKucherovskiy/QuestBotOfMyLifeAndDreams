@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Telegram.Bot;
 using Telegram.Bot.Types;
 using QuestBotOfMyLifeAndDreams.Configuration;
+using QuestBotOfMyLifeAndDreams.Controllers;
 
 namespace QuestBotOfMyLifeAndDreams.Controllers
 {

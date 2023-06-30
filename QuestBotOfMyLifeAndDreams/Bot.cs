@@ -1,11 +1,13 @@
 ﻿using Microsoft.Extensions.Hosting;
+using System;
+using System.Threading;
+using System.Threading.Tasks;
 using Telegram.Bot;
 using Telegram.Bot.Exceptions;
 using Telegram.Bot.Polling;
 using Telegram.Bot.Types;
 using Telegram.Bot.Types.Enums;
 using QuestBotOfMyLifeAndDreams.Controllers;
-
 
 namespace QuestBotOfMyLifeAndDreams
 {
@@ -49,7 +51,13 @@ namespace QuestBotOfMyLifeAndDreams
             //  Обрабатываем нажатия на кнопки  из Telegram Bot API: https://core.telegram.org/bots/api#callbackquery
             if (update.Type == UpdateType.CallbackQuery)
             {
-                await _inlineController.Handle(update.CallbackQuery, cancellationToken);
+                await _gameController.Handle(new Update
+                {
+                    CallbackQuery = update.CallbackQuery
+                });
+
+
+
                 return;
             }
 
@@ -59,7 +67,10 @@ namespace QuestBotOfMyLifeAndDreams
                 switch (update.Message!.Type)
                 {
                     case MessageType.Text:
-                        await _textMessageController.Handle(update.Message, cancellationToken);
+                        await _gameController.Handle(new Update
+                        {
+                            CallbackQuery = update.CallbackQuery
+                        });
                         return;
                     default:
                         await _defaultMessageController.Handle(update.Message, cancellationToken);

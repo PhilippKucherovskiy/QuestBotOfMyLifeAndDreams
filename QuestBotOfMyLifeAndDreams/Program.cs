@@ -33,17 +33,19 @@ namespace QuestBotOfMyLifeAndDreams
         static void ConfigureServices(IServiceCollection services)
         {
             AppSettings appSettings = BuildAppSettings();
-            services.AddSingleton(BuildAppSettings());
+            services.AddSingleton(appSettings);
 
             services.AddSingleton<IStorage, MemoryStorage>();
 
             services.AddTransient<DefaultMessageController>();
             services.AddTransient<TextMessageController>();
             services.AddTransient<InlineController>();
-            services.AddSingleton<IStorage, MemoryStorage>();
+            services.AddSingleton<GameDictionary>();
+            services.AddTransient<GameController>();
 
             // Регистрируем объект TelegramBotClient c токеном подключения
-            services.AddSingleton<ITelegramBotClient>(provider => new TelegramBotClient("6081836295:AAHbvbEt9_wBHULc7VEmGkXlY4gW5cW7coI"));
+            services.AddSingleton<ITelegramBotClient>(provider => new TelegramBotClient(appSettings.BotToken));
+
             // Регистрируем постоянно активный сервис бота
             services.AddHostedService<Bot>();
         }
