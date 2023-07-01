@@ -104,8 +104,8 @@ namespace QuestBotOfMyLifeAndDreams.Services
                 Text = File.ReadAllText(@"C:\Users\Admin\source\repos\QuestBotOfMyLifeAndDreams\Тексты\1.txt"),
                 Options = new[]
                 {
-                    new Option { Text = "1A", NextBlock = "Block1A" },
-                    new Option { Text = "1C", NextBlock = "Block1C" }
+                    new Option { Text = "Дать еды", NextBlock = "Block1A" },
+                    new Option { Text = "Оставить Двухголового", NextBlock = "Block1C" }
                 }
             };
             AddGameContent("Block1", block1Content);
@@ -116,8 +116,8 @@ namespace QuestBotOfMyLifeAndDreams.Services
                 Text = File.ReadAllText(@"C:\Users\Admin\source\repos\QuestBotOfMyLifeAndDreams\Тексты\1A.txt"),
                 Options = new[]
                 {
-        new Option { Text = "1B", NextBlock = "Block1B" },
-        new Option { Text = "1C", NextBlock = "Block1C" }
+        new Option { Text = "Устраивает", NextBlock = "Block1B" },
+        new Option { Text = "Оставить Двухголового", NextBlock = "Block1C" }
     }
             };
             AddGameContent("Block1A", block1AContent);
@@ -128,7 +128,7 @@ namespace QuestBotOfMyLifeAndDreams.Services
                 Text = File.ReadAllText(@"C:\Users\Admin\source\repos\QuestBotOfMyLifeAndDreams\Тексты\1B.txt"),
                 Options = new[]
                 {
-        new Option { Text = "1C", NextBlock = "Block1C" }
+        new Option { Text = "Оставить Двухголового", NextBlock = "Block1C" }
     }
             };
             AddGameContent("Block1B", block1BContent);
@@ -139,8 +139,8 @@ namespace QuestBotOfMyLifeAndDreams.Services
                 Text = File.ReadAllText(@"C:\Users\Admin\source\repos\QuestBotOfMyLifeAndDreams\Тексты\1C.txt"),
                 Options = new[]
                 {
-        new Option { Text = "14", NextBlock = "Block14" },
-        new Option { Text = "7", NextBlock = "Block7" }
+        new Option { Text = "Пойти на Юг", NextBlock = "Block14" },
+        new Option { Text = "Свернуть на Запад", NextBlock = "Block7" }
     }
             };
             AddGameContent("Block1C", block1CContent);
@@ -151,9 +151,9 @@ namespace QuestBotOfMyLifeAndDreams.Services
                 Text = File.ReadAllText(@"C:\Users\Admin\source\repos\QuestBotOfMyLifeAndDreams\Тексты\2.txt"),
                 Options = new[]
                 {
-        new Option { Text = "2A", NextBlock = "Block2A" },
-        new Option { Text = "2B", NextBlock = "Block2B" },
-        new Option { Text = "2C", NextBlock = "Block2C" }
+        new Option { Text = "Поговорить", NextBlock = "Block2A" },
+        new Option { Text = "Завязать Драку", NextBlock = "Block2B" },
+        
     }
             };
             AddGameContent("Block2", block2Content);
@@ -164,8 +164,8 @@ namespace QuestBotOfMyLifeAndDreams.Services
                 Text = File.ReadAllText(@"C:\Users\Admin\source\repos\QuestBotOfMyLifeAndDreams\Тексты\2A.txt"),
                 Options = new[]
                 {
-        new Option { Text = "2B", NextBlock = "Block2B" },
-        new Option { Text = "2C", NextBlock = "Block2C" }
+        new Option { Text = "Драться", NextBlock = "Block2B" },
+        new Option { Text = "Дать кристалл", NextBlock = "Block2C" }
     }
             };
             AddGameContent("Block2A", block2AContent);
@@ -187,8 +187,8 @@ namespace QuestBotOfMyLifeAndDreams.Services
                 Text = File.ReadAllText(@"C:\Users\Admin\source\repos\QuestBotOfMyLifeAndDreams\Тексты\2C.txt"),
                 Options = new[]
                 {
-        new Option { Text = "11", NextBlock = "Block11" },
-        new Option { Text = "18", NextBlock = "Block18" }
+        new Option { Text = "Направиться к хижине", NextBlock = "Block11" },
+        new Option { Text = "Идти дальше", NextBlock = "Block18" }
     }
             };
             AddGameContent("Block2C", block2CContent);
@@ -199,7 +199,7 @@ namespace QuestBotOfMyLifeAndDreams.Services
                 Text = File.ReadAllText(@"C:\Users\Admin\source\repos\QuestBotOfMyLifeAndDreams\Тексты\3.txt"),
                 Options = new[]
                 {
-        new Option { Text = "3A", NextBlock = "Block3A" },
+        new Option { Text = "Не знаю", NextBlock = "Block3A" },
         new Option { Text = "8", NextBlock = "Block8" }
     }
             };
@@ -211,7 +211,7 @@ namespace QuestBotOfMyLifeAndDreams.Services
                 Text = File.ReadAllText(@"C:\Users\Admin\source\repos\QuestBotOfMyLifeAndDreams\Тексты\3A.txt"),
                 Options = new[]
                 {
-        new Option { Text = "9", NextBlock = "Block9" }
+        new Option { Text = "NO CHOICE", NextBlock = "Block3A" }
     }
             };
             AddGameContent("Block3A", block3AContent);
@@ -222,9 +222,9 @@ namespace QuestBotOfMyLifeAndDreams.Services
                 Text = File.ReadAllText(@"C:\Users\Admin\source\repos\QuestBotOfMyLifeAndDreams\Тексты\4.txt"),
                 Options = new[]
                 {
-        new Option { Text = "4A", NextBlock = "Block4A" },
-        new Option { Text = "4B", NextBlock = "Block4B" },
-        new Option { Text = "6", NextBlock = "Block6" }
+        new Option { Text = "Открыть мешок", NextBlock = "Block4A" },
+        new Option { Text = "Войти в пещеру", NextBlock = "Block4B" },
+        new Option { Text = "Продолжить путь", NextBlock = "Block6" }
     }
             };
             AddGameContent("Block4", block4Content);
@@ -235,8 +235,8 @@ namespace QuestBotOfMyLifeAndDreams.Services
                 Text = File.ReadAllText(@"C:\Users\Admin\source\repos\QuestBotOfMyLifeAndDreams\Тексты\4A.txt"),
                 Options = new[]
                 {
-        new Option { Text = "4B", NextBlock = "Block4B" },
-        new Option { Text = "6", NextBlock = "Block6" }
+        new Option { Text = "Войти в пещеру", NextBlock = "Block4B" },
+        new Option { Text = "Пойти дальше", NextBlock = "Block6" }
     }
             };
             AddGameContent("Block4A", block4AContent);
@@ -247,9 +247,9 @@ namespace QuestBotOfMyLifeAndDreams.Services
                 Text = File.ReadAllText(@"C:\Users\Admin\source\repos\QuestBotOfMyLifeAndDreams\Тексты\4B.txt"),
                 Options = new[]
                 {
-        new Option { Text = "4C", NextBlock = "Block4C" },
-        new Option { Text = "4D", NextBlock = "Block4D" },
-        new Option { Text = "6", NextBlock = "Block6" }
+        new Option { Text = "Разбить горшок", NextBlock = "Block4C" },
+        new Option { Text = "Положить 1 золотую монету", NextBlock = "Block4D" },
+        new Option { Text = "Выйти из пещеры", NextBlock = "Block6" }
     }
             };
             AddGameContent("Block4B", block4BContent);
@@ -260,7 +260,7 @@ namespace QuestBotOfMyLifeAndDreams.Services
                 Text = File.ReadAllText(@"C:\Users\Admin\source\repos\QuestBotOfMyLifeAndDreams\Тексты\4C.txt"),
                 Options = new[]
                 {
-        new Option { Text = "6", NextBlock = "Block6" }
+        new Option { Text = "Пойти дальше на Юг", NextBlock = "Block6" }
     }
             };
             AddGameContent("Block4C", block4CContent);
@@ -271,12 +271,27 @@ namespace QuestBotOfMyLifeAndDreams.Services
                 Text = File.ReadAllText(@"C:\Users\Admin\source\repos\QuestBotOfMyLifeAndDreams\Тексты\4D.txt"),
                 Options = new[]
                 {
-        new Option { Text = "6", NextBlock = "Block6" },
-        new Option { Text = "4E", NextBlock = "Block4E" },
-        new Option { Text = "NO CHOICE", NextBlock = "Block4D" }
+        new Option { Text = "Взять 1 кольцо", NextBlock = "Block6" },
+        new Option { Text = "Взять оба кольца", NextBlock = "Block4E" },
     }
             };
             AddGameContent("Block4D", block4DContent);
+
+            // Блок 4E
+            var block4EContent = new GameContent
+            {
+                Text = File.ReadAllText(@"C:\Users\Admin\source\repos\QuestBotOfMyLifeAndDreams\Тексты\4E.txt"),
+
+                Options = new[]
+                {
+                    new Option { Text = "NO CHOICE", NextBlock = "Block4E" },
+
+            }
+            };
+            AddGameContent("Block4E", block4EContent);
+
+
+
 
             // Блок 5
             var block5Content = new GameContent
@@ -284,8 +299,8 @@ namespace QuestBotOfMyLifeAndDreams.Services
                 Text = File.ReadAllText(@"C:\Users\Admin\source\repos\QuestBotOfMyLifeAndDreams\Тексты\5.txt"),
                 Options = new[]
                 {
-        new Option { Text = "5A", NextBlock = "Block5A" },
-        new Option { Text = "5B", NextBlock = "Block5B" }
+        new Option { Text = "Применить Ларец-Ловушку", NextBlock = "Block5A" },
+        new Option { Text = "Сразиться мечом", NextBlock = "Block5B" }
     }
             };
             AddGameContent("Block5", block5Content);
@@ -296,11 +311,21 @@ namespace QuestBotOfMyLifeAndDreams.Services
                 Text = File.ReadAllText(@"C:\Users\Admin\source\repos\QuestBotOfMyLifeAndDreams\Тексты\5A.txt"),
                 Options = new[]
                 {
-        new Option { Text = "12", NextBlock = "Block12" },
-        new Option { Text = "NO CHOICE", NextBlock = "Block5A" }
+        new Option { Text = "Идти вглубь туннеля", NextBlock = "Block12" }
     }
             };
             AddGameContent("Block5A", block5AContent);
+
+            // Блок 5B
+            var block5BContent = new GameContent
+            {
+                Text = File.ReadAllText(@"C:\Users\Admin\source\repos\QuestBotOfMyLifeAndDreams\Тексты\5A.txt"),
+                Options = new[]
+                {
+        new Option { Text = "NO CHOICE", NextBlock = "Block5B" }
+    }
+            };
+            AddGameContent("Block5B", block5BContent);
 
             // Блок 6
             var block6Content = new GameContent
@@ -308,9 +333,9 @@ namespace QuestBotOfMyLifeAndDreams.Services
                 Text = File.ReadAllText(@"C:\Users\Admin\source\repos\QuestBotOfMyLifeAndDreams\Тексты\6.txt"),
                 Options = new[]
                 {
-        new Option { Text = "6A", NextBlock = "Block6A" },
-        new Option { Text = "6B", NextBlock = "Block6B" },
-        new Option { Text = "9", NextBlock = "Block9" }
+        new Option { Text = "Зайти в палатку", NextBlock = "Block6A" },
+        new Option { Text = "Напасть", NextBlock = "Block6B" },
+        new Option { Text = "Попрощаться и пойти на Юг", NextBlock = "Block9" }
     }
             };
             AddGameContent("Block6", block6Content);
@@ -321,8 +346,8 @@ namespace QuestBotOfMyLifeAndDreams.Services
                 Text = File.ReadAllText(@"C:\Users\Admin\source\repos\QuestBotOfMyLifeAndDreams\Тексты\6A.txt"),
                 Options = new[]
                 {
-        new Option { Text = "9", NextBlock = "Block9" },
-        new Option { Text = "6C", NextBlock = "Block6C" }
+        new Option { Text = "Не связываться с ковром-самолетом", NextBlock = "Block9" },
+        new Option { Text = "Купить ковер-самолет", NextBlock = "Block6C" }
     }
             };
             AddGameContent("Block6A", block6AContent);
@@ -344,7 +369,7 @@ namespace QuestBotOfMyLifeAndDreams.Services
                 Text = File.ReadAllText(@"C:\Users\Admin\source\repos\QuestBotOfMyLifeAndDreams\Тексты\6C.txt"),
                 Options = new[]
                 {
-        new Option { Text = "17", NextBlock = "Block17" }
+        new Option { Text = "Взлететь на ковре-самолете", NextBlock = "Block17" }
     }
             };
             AddGameContent("Block6C", block6CContent);
@@ -355,8 +380,8 @@ namespace QuestBotOfMyLifeAndDreams.Services
                 Text = File.ReadAllText(@"C:\Users\Admin\source\repos\QuestBotOfMyLifeAndDreams\Тексты\7.txt"),
                 Options = new[]
                 {
-        new Option { Text = "7A", NextBlock = "Block7A" },
-        new Option { Text = "7C", NextBlock = "Block7C" }
+        new Option { Text = "Присутствовать на гонке", NextBlock = "Block7A" },
+        new Option { Text = "Покинуть деревню", NextBlock = "Block7C" }
     }
             };
             AddGameContent("Block7", block7Content);
@@ -367,8 +392,8 @@ namespace QuestBotOfMyLifeAndDreams.Services
                 Text = File.ReadAllText(@"C:\Users\Admin\source\repos\QuestBotOfMyLifeAndDreams\Тексты\7A.txt"),
                 Options = new[]
                 {
-        new Option { Text = "7B", NextBlock = "Block7B" },
-        new Option { Text = "7C", NextBlock = "Block7C" }
+        new Option { Text = "Купить книгу", NextBlock = "Block7B" },
+        new Option { Text = "Покинуть деревню", NextBlock = "Block7C" }
     }
             };
             AddGameContent("Block7A", block7AContent);
@@ -379,7 +404,7 @@ namespace QuestBotOfMyLifeAndDreams.Services
                 Text = File.ReadAllText(@"C:\Users\Admin\source\repos\QuestBotOfMyLifeAndDreams\Тексты\7B.txt"),
                 Options = new[]
                 {
-        new Option { Text = "7C", NextBlock = "Block7C" }
+        new Option { Text = "Покинуть деревню", NextBlock = "Block7C" }
     }
             };
             AddGameContent("Block7B", block7BContent);
@@ -390,7 +415,7 @@ namespace QuestBotOfMyLifeAndDreams.Services
                 Text = File.ReadAllText(@"C:\Users\Admin\source\repos\QuestBotOfMyLifeAndDreams\Тексты\7C.txt"),
                 Options = new[]
                 {
-        new Option { Text = "14", NextBlock = "Block14" }
+        new Option { Text = "Пойти на Юг", NextBlock = "Block14" }
     }
             };
             AddGameContent("Block7C", block7CContent);
@@ -401,9 +426,9 @@ namespace QuestBotOfMyLifeAndDreams.Services
                 Text = File.ReadAllText(@"C:\Users\Admin\source\repos\QuestBotOfMyLifeAndDreams\Тексты\8.txt"),
                 Options = new[]
                 {
-        new Option { Text = "8A", NextBlock = "Block8A" },
-        new Option { Text = "2", NextBlock = "Block2" },
-        new Option { Text = "15", NextBlock = "Block15" }
+        new Option { Text = "Подобрать хрустальный шар", NextBlock = "Block8A" },
+        new Option { Text = "Выбежать из храма", NextBlock = "Block2" },
+        new Option { Text = "Спуститься по лестнице", NextBlock = "Block15" }
     }
             };
             AddGameContent("Block8", block8Content);
@@ -495,8 +520,8 @@ namespace QuestBotOfMyLifeAndDreams.Services
                 Text = File.ReadAllText(@"C:\Users\Admin\source\repos\QuestBotOfMyLifeAndDreams\Тексты\10A.txt"),
                 Options = new[]
                 {
-        new Option { Text = "16", NextBlock = "Block16" },
-        new Option { Text = "5", NextBlock = "Block5" }
+        new Option { Text = "Заглянуть в боковой ход", NextBlock = "Block16" },
+        new Option { Text = "Бежать по туннелю дальше", NextBlock = "Block5" }
     }
             };
             AddGameContent("Block10A", block10AContent);
@@ -507,7 +532,7 @@ namespace QuestBotOfMyLifeAndDreams.Services
                 Text = File.ReadAllText(@"C:\Users\Admin\source\repos\QuestBotOfMyLifeAndDreams\Тексты\10B.txt"),
                 Options = new[]
                 {
-        new Option { Text = "10A", NextBlock = "Block10A" }
+        new Option { Text = "Далее", NextBlock = "Block10A" }
     }
             };
             AddGameContent("Block10B", block10BContent);
@@ -518,8 +543,8 @@ namespace QuestBotOfMyLifeAndDreams.Services
                 Text = File.ReadAllText(@"C:\Users\Admin\source\repos\QuestBotOfMyLifeAndDreams\Тексты\11.txt"),
                 Options = new[]
                 {
-        new Option { Text = "11A", NextBlock = "Block11A" },
-        new Option { Text = "11B", NextBlock = "Block11B" }
+        new Option { Text = "Перенестись в Подземелье Отчаяния", NextBlock = "Block11A" },
+        new Option { Text = "Получить Волшебную Палочку", NextBlock = "Block11B" }
     }
             };
             AddGameContent("Block11", block11Content);
@@ -530,7 +555,7 @@ namespace QuestBotOfMyLifeAndDreams.Services
                 Text = File.ReadAllText(@"C:\Users\Admin\source\repos\QuestBotOfMyLifeAndDreams\Тексты\11A.txt"),
                 Options = new[]
                 {
-        new Option { Text = "5", NextBlock = "Block5" }
+        new Option { Text = "Далее", NextBlock = "Block5" }
     }
             };
             AddGameContent("Block11A", block11AContent);
@@ -541,7 +566,7 @@ namespace QuestBotOfMyLifeAndDreams.Services
                 Text = File.ReadAllText(@"C:\Users\Admin\source\repos\QuestBotOfMyLifeAndDreams\Тексты\11B.txt"),
                 Options = new[]
                 {
-        new Option { Text = "18", NextBlock = "Block18" }
+        new Option { Text = "Продолжить путь", NextBlock = "Block18" }
     }
             };
             AddGameContent("Block11B", block11BContent);
@@ -564,7 +589,7 @@ namespace QuestBotOfMyLifeAndDreams.Services
                 Text = File.ReadAllText(@"C:\Users\Admin\source\repos\QuestBotOfMyLifeAndDreams\Тексты\12A.txt"),
                 Options = new[]
                 {
-        new Option { Text = "12B", NextBlock = "Block12B" },
+        new Option { Text = "Взмахнуть Волшебной Палочкой", NextBlock = "Block12B" },
         new Option { Text = "12D", NextBlock = "Block12D" }
     }
             };
@@ -576,7 +601,7 @@ namespace QuestBotOfMyLifeAndDreams.Services
                 Text = File.ReadAllText(@"C:\Users\Admin\source\repos\QuestBotOfMyLifeAndDreams\Тексты\12B.txt"),
                 Options = new[]
                 {
-        new Option { Text = "13", NextBlock = "Block13" }
+        new Option { Text = "Далее", NextBlock = "Block13" }
     }
             };
             AddGameContent("Block12B", block12BContent);
@@ -587,7 +612,7 @@ namespace QuestBotOfMyLifeAndDreams.Services
                 Text = File.ReadAllText(@"C:\Users\Admin\source\repos\QuestBotOfMyLifeAndDreams\Тексты\12C.txt"),
                 Options = new[]
                 {
-        new Option { Text = "13", NextBlock = "Block13" }
+        new Option { Text = "NO CHOICE", NextBlock = "Block12C" }
     }
             };
             AddGameContent("Block12C", block12CContent);
@@ -598,7 +623,7 @@ namespace QuestBotOfMyLifeAndDreams.Services
                 Text = File.ReadAllText(@"C:\Users\Admin\source\repos\QuestBotOfMyLifeAndDreams\Тексты\12D.txt"),
                 Options = new[]
                 {
-        new Option { Text = "12C", NextBlock = "Block12C" }
+        new Option { Text = "Далее", NextBlock = "Block12C" }
     }
             };
             AddGameContent("Block12D", block12DContent);
@@ -609,7 +634,7 @@ namespace QuestBotOfMyLifeAndDreams.Services
                 Text = File.ReadAllText(@"C:\Users\Admin\source\repos\QuestBotOfMyLifeAndDreams\Тексты\13.txt"),
                 Options = new[]
                 {
-        new Option { Text = "13A", NextBlock = "Block13A" },
+        new Option { Text = "Сыграть на Магической Флейте", NextBlock = "Block13A" },
         new Option { Text = "13B", NextBlock = "Block13B" }
     }
             };
@@ -621,10 +646,21 @@ namespace QuestBotOfMyLifeAndDreams.Services
                 Text = File.ReadAllText(@"C:\Users\Admin\source\repos\QuestBotOfMyLifeAndDreams\Тексты\13A.txt"),
                 Options = new[]
                 {
-        new Option { Text = "20", NextBlock = "Block20" }
+        new Option { Text = "За Казаран!", NextBlock = "Block20" }
     }
             };
             AddGameContent("Block13A", block13AContent);
+
+            // Блок 13B
+            var block13BContent = new GameContent
+            {
+                Text = File.ReadAllText(@"C:\Users\Admin\source\repos\QuestBotOfMyLifeAndDreams\Тексты\13B.txt"),
+                Options = new[]
+                {
+        new Option { Text = "За Казаран!", NextBlock = "Block13B" }
+    }
+            };
+            AddGameContent("Block13B", block13BContent);
 
             // Блок 14
             var block14Content = new GameContent
@@ -666,8 +702,8 @@ namespace QuestBotOfMyLifeAndDreams.Services
                 Text = File.ReadAllText(@"C:\Users\Admin\source\repos\QuestBotOfMyLifeAndDreams\Тексты\14C.txt"),
                 Options = new[]
                 {
-        new Option { Text = "19", NextBlock = "Block19" },
-        new Option { Text = "4", NextBlock = "Block4" }
+        new Option { Text = "Пойти по следам", NextBlock = "Block19" },
+        new Option { Text = "Продолжить путь на Юг", NextBlock = "Block4" }
     }
             };
             AddGameContent("Block14C", block14CContent);
@@ -678,7 +714,7 @@ namespace QuestBotOfMyLifeAndDreams.Services
                 Text = File.ReadAllText(@"C:\Users\Admin\source\repos\QuestBotOfMyLifeAndDreams\Тексты\15.txt"),
                 Options = new[]
                 {
-        new Option { Text = "15A", NextBlock = "Block15A" },
+        new Option { Text = "Отдать скрипичную струну", NextBlock = "Block15A" },
         new Option { Text = "15B", NextBlock = "Block15B" }
     }
             };
@@ -690,7 +726,7 @@ namespace QuestBotOfMyLifeAndDreams.Services
                 Text = File.ReadAllText(@"C:\Users\Admin\source\repos\QuestBotOfMyLifeAndDreams\Тексты\15A.txt"),
                 Options = new[]
                 {
-        new Option { Text = "2", NextBlock = "Block2" }
+        new Option { Text = "Продолжить путь по Долине", NextBlock = "Block2" }
     }
             };
             AddGameContent("Block15A", block15AContent);
@@ -701,7 +737,7 @@ namespace QuestBotOfMyLifeAndDreams.Services
                 Text = File.ReadAllText(@"C:\Users\Admin\source\repos\QuestBotOfMyLifeAndDreams\Тексты\15B.txt"),
                 Options = new[]
                 {
-        new Option { Text = "2", NextBlock = "Block2" }
+        new Option { Text = "Продолжить путь по Долине", NextBlock = "Block2" }
     }
             };
             AddGameContent("Block15B", block15BContent);
@@ -712,7 +748,8 @@ namespace QuestBotOfMyLifeAndDreams.Services
                 Text = File.ReadAllText(@"C:\Users\Admin\source\repos\QuestBotOfMyLifeAndDreams\Тексты\16.txt"),
                 Options = new[]
                 {
-        new Option { Text = "16A", NextBlock = "Block16A" }
+        new Option { Text = "16A", NextBlock = "Block16A" },
+        new Option { Text = "Продолжить путь", NextBlock = "Block5" }
     }
             };
             AddGameContent("Block16", block16Content);
@@ -723,7 +760,7 @@ namespace QuestBotOfMyLifeAndDreams.Services
                 Text = File.ReadAllText(@"C:\Users\Admin\source\repos\QuestBotOfMyLifeAndDreams\Тексты\16A.txt"),
                 Options = new[]
                 {
-        new Option { Text = "5", NextBlock = "Block5" }
+        new Option { Text = "Продолжить путь", NextBlock = "Block5" }
     }
             };
             AddGameContent("Block16A", block16AContent);
@@ -734,8 +771,8 @@ namespace QuestBotOfMyLifeAndDreams.Services
                 Text = File.ReadAllText(@"C:\Users\Admin\source\repos\QuestBotOfMyLifeAndDreams\Тексты\17.txt"),
                 Options = new[]
                 {
-        new Option { Text = "17A", NextBlock = "Block17A" },
-        new Option { Text = "17B", NextBlock = "Block17B" }
+        new Option { Text = "Идерепв", NextBlock = "Block17A" },
+        new Option { Text = "Дерепв", NextBlock = "Block17B" }
     }
             };
             AddGameContent("Block17", block17Content);
@@ -746,7 +783,7 @@ namespace QuestBotOfMyLifeAndDreams.Services
                 Text = File.ReadAllText(@"C:\Users\Admin\source\repos\QuestBotOfMyLifeAndDreams\Тексты\17A.txt"),
                 Options = new[]
                 {
-        new Option { Text = "9", NextBlock = "Block9" }
+        new Option { Text = "Дальше", NextBlock = "Block9" }
     }
             };
             AddGameContent("Block17A", block17AContent);
@@ -757,7 +794,7 @@ namespace QuestBotOfMyLifeAndDreams.Services
                 Text = File.ReadAllText(@"C:\Users\Admin\source\repos\QuestBotOfMyLifeAndDreams\Тексты\17B.txt"),
                 Options = new[]
                 {
-        new Option { Text = "3", NextBlock = "Block3" }
+        new Option { Text = "В дорогу", NextBlock = "Block3" }
     }
             };
             AddGameContent("Block17B", block17BContent);
@@ -768,8 +805,8 @@ namespace QuestBotOfMyLifeAndDreams.Services
                 Text = File.ReadAllText(@"C:\Users\Admin\source\repos\QuestBotOfMyLifeAndDreams\Тексты\18.txt"),
                 Options = new[]
                 {
-        new Option { Text = "18A", NextBlock = "Block18A" },
-        new Option { Text = "18B", NextBlock = "Block18B" }
+        new Option { Text = "Синий цвет", NextBlock = "Block18A" },
+        new Option { Text = "Красный цвет", NextBlock = "Block18B" }
     }
             };
             AddGameContent("Block18", block18Content);
@@ -780,7 +817,7 @@ namespace QuestBotOfMyLifeAndDreams.Services
                 Text = File.ReadAllText(@"C:\Users\Admin\source\repos\QuestBotOfMyLifeAndDreams\Тексты\18A.txt"),
                 Options = new[]
                 {
-        new Option { Text = "18C", NextBlock = "Block18C" }
+        new Option { Text = "Далее", NextBlock = "Block18C" }
     }
             };
             AddGameContent("Block18A", block18AContent);
@@ -791,7 +828,7 @@ namespace QuestBotOfMyLifeAndDreams.Services
                 Text = File.ReadAllText(@"C:\Users\Admin\source\repos\QuestBotOfMyLifeAndDreams\Тексты\18B.txt"),
                 Options = new[]
                 {
-        new Option { Text = "18D", NextBlock = "Block18D" }
+        new Option { Text = "Дальше", NextBlock = "Block18D" }
     }
             };
             AddGameContent("Block18B", block18BContent);
@@ -803,7 +840,7 @@ namespace QuestBotOfMyLifeAndDreams.Services
                 Options = new[]
                 {
         new Option { Text = "10", NextBlock = "Block10" },
-        new Option { Text = "18D", NextBlock = "Block18D" }
+        new Option { Text = "Не могу сосчитать", NextBlock = "Block18D" }
     }
             };
             AddGameContent("Block18C", block18CContent);
@@ -825,9 +862,9 @@ namespace QuestBotOfMyLifeAndDreams.Services
                 Text = File.ReadAllText(@"C:\Users\Admin\source\repos\QuestBotOfMyLifeAndDreams\Тексты\19.txt"),
                 Options = new[]
                 {
-        new Option { Text = "19A", NextBlock = "Block19A" },
-        new Option { Text = "6", NextBlock = "Block6" },
-        new Option { Text = "4", NextBlock = "Block4" }
+        new Option { Text = "Сразиться", NextBlock = "Block19A" },
+        new Option { Text = "Идти дальше на Юг", NextBlock = "Block6" },
+        new Option { Text = "Вернуться на дорогу", NextBlock = "Block4" }
     }
             };
             AddGameContent("Block19", block19Content);
@@ -838,8 +875,8 @@ namespace QuestBotOfMyLifeAndDreams.Services
                 Text = File.ReadAllText(@"C:\Users\Admin\source\repos\QuestBotOfMyLifeAndDreams\Тексты\19A.txt"),
                 Options = new[]
                 {
-        new Option { Text = "19B", NextBlock = "Block19B" },
-        new Option { Text = "19C", NextBlock = "Block19C" }
+        new Option { Text = "Использовать меч", NextBlock = "Block19B" },
+        new Option { Text = "Придумать уловку", NextBlock = "Block19C" }
     }
             };
             AddGameContent("Block19A", block19AContent);
@@ -850,7 +887,7 @@ namespace QuestBotOfMyLifeAndDreams.Services
                 Text = File.ReadAllText(@"C:\Users\Admin\source\repos\QuestBotOfMyLifeAndDreams\Тексты\19B.txt"),
                 Options = new[]
                 {
-        new Option { Text = "19C", NextBlock = "Block19C" }
+        new Option { Text = "Придумать уловку", NextBlock = "Block19C" }
     }
             };
             AddGameContent("Block19B", block19BContent);
@@ -861,8 +898,8 @@ namespace QuestBotOfMyLifeAndDreams.Services
                 Text = File.ReadAllText(@"C:\Users\Admin\source\repos\QuestBotOfMyLifeAndDreams\Тексты\19C.txt"),
                 Options = new[]
                 {
-        new Option { Text = "6", NextBlock = "Block6" },
-        new Option { Text = "4", NextBlock = "Block4" }
+        new Option { Text = "Прямо на Юг", NextBlock = "Block6" },
+        new Option { Text = "Сначала на прежнюю дорогу", NextBlock = "Block4" }
     }
             };
             AddGameContent("Block19C", block19CContent);
@@ -873,8 +910,8 @@ namespace QuestBotOfMyLifeAndDreams.Services
                 Text = File.ReadAllText(@"C:\Users\Admin\source\repos\QuestBotOfMyLifeAndDreams\Тексты\20.txt"),
                 Options = new[]
                 {
-        new Option { Text = "20A", NextBlock = "Block20A" },
-        new Option { Text = "20B", NextBlock = "Block20B" }
+        new Option { Text = "Использовать Кроличью Лапку", NextBlock = "Block20A" },
+        new Option { Text = "Далее", NextBlock = "Block20B" }
     }
             };
             AddGameContent("Block20", block20Content);
@@ -896,7 +933,7 @@ namespace QuestBotOfMyLifeAndDreams.Services
                 Text = File.ReadAllText(@"C:\Users\Admin\source\repos\QuestBotOfMyLifeAndDreams\Тексты\20C.txt"),
                 Options = new[]
                 {
-        new Option { Text = "21", NextBlock = "Block21" }
+        new Option { Text = "Далее", NextBlock = "Block21" }
     }
             };
             AddGameContent("Block20C", block20CContent);
@@ -907,7 +944,7 @@ namespace QuestBotOfMyLifeAndDreams.Services
                 Text = File.ReadAllText(@"C:\Users\Admin\source\repos\QuestBotOfMyLifeAndDreams\Тексты\21.txt"),
                 Options = new[]
                 {
-        new Option { Text = "22", NextBlock = "Block22" }
+        new Option { Text = "Далее", NextBlock = "Block22" }
     }
             };
             AddGameContent("Block21", block21Content);
@@ -918,7 +955,7 @@ namespace QuestBotOfMyLifeAndDreams.Services
                 Text = File.ReadAllText(@"C:\Users\Admin\source\repos\QuestBotOfMyLifeAndDreams\Тексты\22.txt"),
                 Options = new[]
                 {
-        new Option { Text = "23", NextBlock = "Block23" }
+        new Option { Text = "Далее", NextBlock = "Block23" }
     }
             };
             AddGameContent("Block22", block22Content);
