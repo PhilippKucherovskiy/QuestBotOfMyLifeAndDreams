@@ -81,7 +81,12 @@ namespace QuestBotOfMyLifeAndDreams.Controllers
         {
             if (_previousMessageId != 0)
             {
+                // Удаляем предыдущие кнопки
                 await _telegramClient.EditMessageReplyMarkupAsync(_chatId, _previousMessageId, replyMarkup: null);
+
+                // Удаляем первые кнопки
+                await _telegramClient.DeleteMessageAsync(_chatId, _previousMessageId - 1);
+
                 _previousMessageId = 0;
             }
         }
