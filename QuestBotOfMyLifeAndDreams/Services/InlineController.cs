@@ -35,23 +35,38 @@ namespace QuestBotOfMyLifeAndDreams.Controllers
                     )
                 );
 
-                // Удаляем предыдущее сообщение
-                await DeletePreviousMessage();
+                // Удаляем предыдущие кнопки, если они были
+                await DeletePreviousButtons();
 
-                var message = await _telegramClient.SendTextMessageAsync(
-                    chatId: callbackQuery.Message.Chat.Id,
-                    text: gameContent.Text,
-                    replyMarkup: replyMarkup
-                );
+                if (_previousMessageId == 0)
+                {
+                    // Отправляем новое сообщение с текстом и кнопками
+                    var message = await _telegramClient.SendTextMessageAsync(
+                        chatId: callbackQuery.Message.Chat.Id,
+                        text: gameContent.Text,
+                        replyMarkup: replyMarkup
+                    );
 
-                _chatId = message.Chat.Id;
-                _previousMessageId = message.MessageId;
+                    _chatId = message.Chat.Id;
+                    _previousMessageId = message.MessageId;
+                }
+                else
+                {
+                    // Редактируем предыдущее сообщение, заменяя кнопки
+                    await _telegramClient.EditMessageTextAsync(
+                        chatId: _chatId,
+                        messageId: _previousMessageId,
+                        text: gameContent.Text,
+                        replyMarkup: replyMarkup
+                    );
+                }
             }
             else
             {
-                // Удаляем предыдущее сообщение
-                await DeletePreviousMessage();
+                // Удаляем предыдущие кнопки, если они были
+                await DeletePreviousButtons();
 
+                // Отправляем новое сообщение только с текстом
                 var message = await _telegramClient.SendTextMessageAsync(
                     chatId: callbackQuery.Message.Chat.Id,
                     text: gameContent.Text
@@ -62,11 +77,11 @@ namespace QuestBotOfMyLifeAndDreams.Controllers
             }
         }
 
-        private async Task DeletePreviousMessage()
+        private async Task DeletePreviousButtons()
         {
             if (_previousMessageId != 0)
             {
-                await _telegramClient.DeleteMessageAsync(_chatId, _previousMessageId);
+                await _telegramClient.EditMessageReplyMarkupAsync(_chatId, _previousMessageId, replyMarkup: null);
                 _previousMessageId = 0;
             }
         }
