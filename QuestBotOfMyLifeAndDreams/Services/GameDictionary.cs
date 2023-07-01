@@ -12,7 +12,7 @@ namespace QuestBotOfMyLifeAndDreams.Services
 
             var startGameContent = new GameContent
             {
-                Text = "Казаран — страна, на которой лежит заклятие злых колдунов, страна, которую без конца терзают орды кошмарных монстров. Король Казарана погиб в бою, сражаясь с безжалостными людоедами, а его сын и наследник принц Золотой Сокол лежит без сознания в замке Казаран, отравленный прислужником колдуна Дакмуна. Маррис, старый придворный чародей Казарана, хранит в тайне покушение на Золотого Сокола и его нынешнее состояние: он не хочет, чтобы в такие тяжелые времена народ узнал, что остался без правителя и защитника. Люди и так были крайне подавлены и напуганы: ведь армия людоедов была на расстоянии всего лишь одного дневного перехода от замка Казаран. Но у мудрого Марриса созрел хитрый план. В поисках подходящей кандидатуры, способной заменить Золотого Сокола, он открыл Врата Времени.",
+                Text = "Start Game",
                 Options = new[]
                 {
                     new Option { Text = "Дальше", NextBlock = "Block01" }
@@ -20,33 +20,33 @@ namespace QuestBotOfMyLifeAndDreams.Services
             };
             AddGameContent("StartBlock", startGameContent);
 
-            
-            
+
+
             var block01Content = new GameContent
             {
-                Text = "Минуту назад ты лежал в постели и смотрел YouTube, а в следующее мгновение тебя закружил чудовищный вихрь и помчал сквозь пространство и время. Ты оказался в замке Казаран, став абсолютной копией принца Золотого Сокола. Согласившись помочь Маррису, ты отправился на поиски древней короны королей Казарана, попавшей в лапы к зловещему Дакмуну. В твоих приключениях тебе помогали два странных существа — Орландо, верный слуга принца, бывший Карлик, превращенный Дакмуном в Металлического Поросенка, и Эдж — говорящий меч. Полная опасностей дорога пролегала через лес Лонгшэдоу и Воющие Туннели и, наконец, привела тебя к мрачному обиталищу Дакмуна — замку Маггот. С помощью древней святыни Эльфов — браслета Золотой Руки — тебе удалось победить Дакмуна и заставить его превратить самого себя в белую мышь. Ты с триумфом вернулся в замок Казаран, где счастливые подданные во главе с Маррисом устроили тебе горячий прием, достойный настоящего героя.",
+                Text = "01",
                 Options = new[]
                 {
                     new Option { Text = "Дальше", NextBlock = "Block03" },
-                    
+
                 }
             };
             AddGameContent("Block01", block01Content);
 
             var block03Content = new GameContent
             {
-                Text = "Веря, что видят перед собой настоящего принца, граждане Казарана хотят чтобы ты стал их королем. В тиши своей библиотеки Маррис предлагает тебе корону, зная, что тебе придется покинуть твой собственный мир, и возможно навсегда. Ты ответил ему что дашь ответ утром...\r\nТы просыпаешься от звука фанфар, запевших во дворе замка. В окно твоей спальни вливается яркий солнечный свет, и ты счастлив от того, что находишься в этом сказочном королевстве.\r\n“И они хотят, чтобы я стал их королем!” — вслух произносишь ты.\r\n“Можешь в этом не сомневаться!” — раздается из-под кровати знакомый голос.\r\nТы оглядываешься и видишь Орландо, который прямо сияет от восторга, хотя так и остался в облике Металлическою Поросенка.\r\n- Ну как? Ты решился стать нашим королем? Весь народ просто сходит с ума. Послушай этот шум за окнами! Удивляюсь, как он не разбудил тебя раньше.",
+                Text = "03",
                 Options = new[]
                 {
                     new Option { Text = "Дальше", NextBlock = "Block04" },
-                    
+
                 }
             };
             AddGameContent("Block03", block03Content);
 
             var block04Content = new GameContent
             {
-                Text = "- Ты просто никогда не жил рядом с аэропортом! — отвечаешь ты.\r\n- А что такое аэропорт? — спрашивает Орландо.\r\n- Это такое место, где взлетают реактивные самолеты... Ну, неважно, я объясню тебе как-нибудь в другой раз. Где Маррис?\r\nСловно по волшебству в спальне появляется старый седобородый чародей.\r\n- А, Маррис, ты всегда появляешься вовремя. Я уверен, что ты можешь читать мысли других людей”, — с улыбкой говоришь ты. — “Что ж, друзья мои, я решил. что стану вашим королем. Это будет большая честь для меня.\r\nМаррис удовлетворенно улыбнулся, а Орландо, как оглушенный, сломя голову стал носиться по спальне, пока, наконец, не поскользнулся на скользком каменном полу и с грохотом не врезался в стену.\r\n-Не беспокойтесь, — говорит он, — что мне сделается? А вот на стене, я смотрю, появилась выбоина!\r\nДень обещал быть на редкость удачным. Придворные, слуги, портные, горничные, повара и домоправители, организованные Маррисом, с головокружительной скоростью носятся по замку, с невиданным ранее рвением выполняя свои обязанности.",
+                Text = "04",
                 Options = new[]
                 {
                     new Option { Text = "Дальше", NextBlock = "Block05" }
@@ -56,7 +56,7 @@ namespace QuestBotOfMyLifeAndDreams.Services
 
             var block05Content = new GameContent
             {
-                Text = "На следующий день в замке Казаран собралось множество народа. На лицах людей сияют радостные улыбки. Все с нетерпением ждут начала праздника. Даже Эльфы и Карлики дружелюбно и счастливо разговаривают друг с другом, забыв на время о своих разногласиях. Под звуки фанфар ты медленно идешь к трону, возвышающемуся в конце тройного зала, чтобы принять древнюю корону из рук Марриса. Слова чародея, произносимые с чувством достоинства и благородством, эхом разносятся по всему залу, когда он возлагает корону на твою голову. Гости разражаются криками ликования, когда ты в сопровождении Марриса и Орландо выходишь из тройного зала во двор замка, где народ терпеливо ждет появления короля. Стоя перед своими подданными, ты приветственно машешь им мечом, который на этот раз из соображения приличий помалкивает.\r\nВечером в честь коронации в замке состоялся большой праздничный пир, и только поздно ночью ты удалился в свои покои и лег в постель новым королем Казарана.\r\nОднако утром праздник внезапно закончился: пришли плохие вести от войск, сдерживавших натиск людоедов. Несмотря на поражение Дакмуна, они продолжали успешно развивать наступление, и теперь армия Казарана в беспорядке бежала. Осада замка Казаран была вопросом лишь нескольких дней.\r\n- Сир, — говорит воин в помятых доспехах, — Людоеды собрали целую армию Скелетов и бросили их в бой против нас. Не зная усталости, они раз за разом идут в атаку, и наши воины не выдерживают их натиска. Армия снова отступает. Кроме того, заодно с ними выступают и Черные Друиды, которые используют против нас Пузыри Страха. Эти Пузыри летают над войсками, потом лопаются, и из них на головы наших воинов высыпается порошок, вселяющий в них неописуемый ужас. Так что нет ничего удивительного, что мы отступаем. Мы отчаянно нуждаемся в сильной личности, которая смогла бы переломить ход войны и предотвратить осаду замка Казаран.\r\n- Что ты об этом думаешь, Маррис? — спрашиваешь ты.\r\nЧародей устало опускается в деревянное кресло и, задумавшись, опускает голову.",
+                Text = "05",
                 Options = new[]
                 {
                     new Option { Text = "Дальше", NextBlock = "Block06" }
@@ -66,7 +66,7 @@ namespace QuestBotOfMyLifeAndDreams.Services
 
             var block06Content = new GameContent
             {
-                Text = "- Пузыри Страха и Скелеты... — медленно повторяет Маррис. — Это плохие вести... Очень плохие. Вряд ли нас спасет одна твоя храбрость. Нам\r\nпридется призвать на помощь Серебряных Эльфов, чьи волшебные стрелы могут уничтожить Пузыри Страха раньше, чем они долетят до наших войск. А что касается Скелетов... Я знаю только одно существо, способное справиться с ними. Его зовут Стоунхаммер, и живет он где-то на горе Санстоун. Он и сам огромен, словно гора!\r\n— Почему ты думаешь, что он может помочь нам?— спрашивает Орландо.\r\n- Потому что он — мой сын... — медленно отвечает Маррис.\r\n- Что?! — восклицает Орландо. — Твой сын? Но... Но...\r\n    -Я никогда и никому не говорил об этом, ибо мое сердце разрывается от печали. При рождении я дал ему другое имя. Стоунхаммером он сам стал называть себя после одного ужасною происшествия.\r\n- Какого происшествия? — заинтересованно спрашивает Орландо.\r\n- Это случилось, когда ему исполнилось шестнадцать лет. Тогда Дакмун был очень могущественным колдуном и постоянно пугал жителей деревни, где я жил в те годы. Он делал так, что все люди выглядели лет на тридцать старше своею возраста и я должен был разрушить ею чары. Пока я занимался этим, мой сын выпил один из эликсиров, которые я ютовил в своей лаборатории. К своему несчастью, я забыл запереть дверь на ключ, и он выпил целую реторту с изобретенным мной жидким камнем! С тех пор он начал расти, словно на дрожжах, ею тело стало твердым как камень, но он все рос и рос. Затем он ушел в юры, которые, как он чувствовал, стали ею домом. Прошло уже десять лет, и с тех пор я ею больше не видел. Он прячется ото всех, в том числе и от меня, а проходящим путникам кажется частью юры.\r\n- Как же нам найти его? — спрашиваешь ты.",
+                Text = "06",
                 Options = new[]
                 {
                     new Option { Text = "Дальше", NextBlock = "Block07" }
@@ -76,59 +76,841 @@ namespace QuestBotOfMyLifeAndDreams.Services
 
             var block07Content = new GameContent
             {
-                Text = "- Прежде чем отправиться на гору Санстоун, ты должен поговорить с Королевой Боли: она знает все секреты горы. но надо быть очень смелым человеком, чтобы встретиться с нею. Но теперь, став королем, тебе не обязательно идти к ней самому, хотя, если честно, я не знаю никого друго, кто мог бы справиться с этой задачей. Мне придется навестить Серебряных Эльфов и подготовить замок к осаде, если тебе не удастся остановить людоедов.\r\nПовернувшись к гонцу, ты твердо говоришь:\r\n- Передай генералу, что помошь уже вышла к нему. Скажи, что король Золотой Сокол прибудет через два дня, чтобы лично возглавить армию, а до моего приезда воины должны стоять насмерть. Теперь иди!\r\nКак только гонец вышел из комнаты, Маррис с озабоченным видом стал расхаживать из угла в угол.\r\n- В чем дело, дружище? — спрашиваешь ты.\r\n- Видишь ли, если Стоунхаммер покинет гору Санстоун и не вернется обратно через сутки, он погибнет, ибо черпает энергию из древних скал. Если тебе удастся уговорить ею помочь нам, умоляю тебя вернуть его обратно в горы. Как бы там ни было, он все же мой сын!\r\n- В этом ты можешь на меня положиться, — мягко отвечаешь ты.\r\n- Хорошо! Будем надеяться, что все обойдется без проблем, — с видимым облегчением произносит Маррис.\r\n- Значит, мы снова отправляемся в дорогу! — взволнованно восклицает Орландо.\r\n- Мне кажется, один раз ты уже куда-то ходил, не без сарказма замечает Эдж.\r\n- Эдж! — строго говоришь ты. — Прибереги свое красноречие для беседы с Королевой Боли. Кстати, Маррис, где мы найдем ее?\r\n- В Подземелье Отчаяния, — отвечает чародей. - Я не знаю точно, где это. Мне известно только, что этоо неподалеку от горы Санстоун, которая находится к югу отсюда... Далеко на юг.\r\nСложив в вещевой мешок запас продовольствия и воды, ты отправляешься в новое опасное путешествие.\r\nТеперь хорошенько запомни, что уровень твоего БОЕВОГО МАСТЕРСТВА равен 8 и в твоем кожаном кошельке позвякивают 10 золотых монет. Если в ходе путешествия уровень твоею БОЕВОГО МАСТЕРСТВА снизится до 0, то это будет означать, что ты погиб.",
+                Text = "07",
                 Options = new[]
                 {
                     new Option { Text = "НАЧАТЬ ПРИКЛЮЧЕНИЕ", NextBlock = "Block1" },
-                    
+
                 }
             };
             AddGameContent("Block07", block07Content);
 
+            // Блок 1 
             var block1Content = new GameContent
             {
-                Text = "Стоит яркое солнечное утро, хотя воздух прохладен и свеж. Ты бодр и, отправляясь в новое путешествие, чувствуешь себя в прекрасной форме. События последних нескольких дней промелькнули словно в тумане, и тебе до сих пор не верится, что отныне ты — король Казарана.\r\n- Вам нравится быть королем, сир? — спрашивает Орландо.\r\n- Да, но есть одна вещь, о которой я хотел бы поговорить с вами. — отвечаешь ты. — Я предпочел бы, чтобы вы называли меня Золотой Сокол. Не король и не сир, а просто Золотой Сокол. Договорились?\r\n- Как пожелаете... Золотой Сокол, — с заметной робостью говорит Орландо.\r\nВскоре стены и башни замка Казаран скрываются из виду. Чем дальше ты идешь на юг, тем более бесплодной становится земля, даже клочки травы попадаются на глаза все реже и реже. Если не считать нескольких странного вила птиц, реюших высоко над твоей головой, окружающий пейзаж выглядит совершенно безжизненным. Пыльная дорога, по которой ты идешь, постепенно сужается и вскоре становится не шире тропы, проложенной козами на крутых склонах каменистых холмов. Вскоре тропа приводит тебя к бревенчатой хижине, и ты решаешь сделать привал. За хижиной ты с удивлением замечаешь странного человека, одетого в звериные шкуры. Две головы, сидящие у него на плечах, ожесточенно спорят, которая из них съест небольшую яшерицу, поджариваюшуюся на костре.\r\n- Теперь моя очередь есть! — кричит правая голова. — Вчера ты ела личинки майских жуков!\r\n- Личинки майских жуков! — с негодованием восклицает левая голова. — И ты называешь это едой?!\r\n- И все равно это считается едой! — упрямо стоит на своем правая голова. — Если я не поем сегодня, у меня выпадут зубы! — еще громче орет она.\r\n- А почему бы вам не поделить ящерицу? — мягко спрашиваешь ты, вмешиваясь в спор.\r\nОбе головы враз оборачиваются к тебе, и ты видишь как глубокие складки избороздили их лбы.\r\n- Поделить? Поделить? — ворчит левая голова. — Мы и так всю жизнь делим наше тело, и не собираемся делить еду, разве что только в желудке. А теперь проваливай и не лезь со своими дурацкими советами. Займись лучше собственными делами.",
+                Text = "Блок 1",
                 Options = new[]
                 {
-                    new Option { Text = "Оставить Двухголового и пойти дальше", NextBlock = "Block1А" },
-                    new Option { Text = "Предложить еды в обмен на информацию", NextBlock = "Block1A" }
+                    new Option { Text = "1A", NextBlock = "Block1A" },
+                    new Option { Text = "1C", NextBlock = "Block1C" }
                 }
             };
             AddGameContent("Block1", block1Content);
 
+            // Блок 1A
             var block1AContent = new GameContent
             {
-                Text = "Что у тебя есть? Что ты можешь дать нам поесть? — вопит правая голова.\r\nЕсли вы скажете мне, где находится Подземелье Отчаяния, я дам вам куриную ножку, — спокойно отвечаешь ты.\r\nМы не знаем, где это, и не желаем знать! — быстро отвечает левая голова. — Зато мы можем подсказать тебе, кто это знает! Дай нам две куриные ножки и 2 золотые монеты, и мы тебе скажем, где найти этою человека. Мы даже можем сделать тебе небольшой подарок!",
+                Text = "Блок 1A",
                 Options = new[]
                 {
-                    new Option { Text = "Устраивает", NextBlock = "Block1B" },
-                    new Option { Text = "Оставить Двухголового и пойти дальше", NextBlock = "Block1C" }
-                }
+        new Option { Text = "1B", NextBlock = "Block1B" },
+        new Option { Text = "1C", NextBlock = "Block1C" }
+    }
             };
             AddGameContent("Block1A", block1AContent);
 
+            // Блок 1B
             var block1BContent = new GameContent
             {
-                Text = "Двухголовый выхватывает у тебя из рук куриные ножки, которые с головокружительной быстротой исчезают в его обоих ртах.\r\nВдруг головы снова заводят спор.\r\n- Ты проглотил еду раньше меня! — жалуется левая голова.\r\n- Естественно, я же не ела со вчерашнего дня! — кричит в ответ правая голова.\r\nТы всплескиваешь руками и юворишь им, что они должны успокоиться и перестать орать, иначе ты не дашь им 2 золотые монеты. \r\n- Ну, так где же я найду вашего человека? — спрашиваешь ты, когда устанавливается тишина.\r\nГоловы снова поворачиваются к тебе, и правая говорит:\r\n- Действительно, я и забыла о нашем договоре. Его зовут Толстый Джек, и ты найдешь его в деревне Старый Трингам за любимым занятием — скачками на животе! Чтобы попасть в Старый Трингам, иди по этой дороге до тех пор, пока она не раздвоится. Дальше ступай по той тропке, что ведет на запад. А вот и твой подарочек. Двухголовый протягивает тебе струну от скрипки и начинает громко хохотать. Эдж готов к драке, но ты решаешь, что это бессмысленная трата времени, и пускаешься в путь по тропе, тогда как Орландо что-то бормочет себе под нос о скачках на животах. Ты тоже задумываешься над тем, что бы это могло быть.",
+                Text = "Блок 1B",
                 Options = new[]
                 {
-                    new Option { Text = "Оставить Двухголового и пойти дальше", NextBlock = "Block1C" }
-                }
+        new Option { Text = "1C", NextBlock = "Block1C" }
+    }
             };
             AddGameContent("Block1B", block1BContent);
 
+            // Блок 1C
             var block1CContent = new GameContent
             {
-                Text = "Спустя полчаса ты приходишь к развилке дороги.",
+                Text = "Блок 1C",
                 Options = new[]
                 {
-                    new Option { Text = "Пойти на Юг", NextBlock = "Block14" },
-                    new Option { Text = "Пойти на Север", NextBlock = "Block7" }
-                }
+        new Option { Text = "14", NextBlock = "Block14" },
+        new Option { Text = "7", NextBlock = "Block7" }
+    }
             };
             AddGameContent("Block1C", block1CContent);
 
-                
+            // Блок 2
+            var block2Content = new GameContent
+            {
+                Text = "Блок 2",
+                Options = new[]
+                {
+        new Option { Text = "2A", NextBlock = "Block2A" },
+        new Option { Text = "2B", NextBlock = "Block2B" },
+        new Option { Text = "2C", NextBlock = "Block2C" }
+    }
+            };
+            AddGameContent("Block2", block2Content);
+
+            // Блок 2A
+            var block2AContent = new GameContent
+            {
+                Text = "Блок 2A",
+                Options = new[]
+                {
+        new Option { Text = "2B", NextBlock = "Block2B" },
+        new Option { Text = "2C", NextBlock = "Block2C" }
+    }
+            };
+            AddGameContent("Block2A", block2AContent);
+
+            // Блок 2B
+            var block2BContent = new GameContent
+            {
+                Text = "Блок 2B",
+                Options = new[]
+                {
+        new Option { Text = "NO CHOICE", NextBlock = "Block2B" }
+    }
+            };
+            AddGameContent("Block2B", block2BContent);
+
+            // Блок 2C
+            var block2CContent = new GameContent
+            {
+                Text = "Блок 2C",
+                Options = new[]
+                {
+        new Option { Text = "11", NextBlock = "Block11" },
+        new Option { Text = "18", NextBlock = "Block18" }
+    }
+            };
+            AddGameContent("Block2C", block2CContent);
+
+            // Блок 3
+            var block3Content = new GameContent
+            {
+                Text = "Блок 3",
+                Options = new[]
+                {
+        new Option { Text = "3A", NextBlock = "Block3A" },
+        new Option { Text = "8", NextBlock = "Block8" }
+    }
+            };
+            AddGameContent("Block3", block3Content);
+
+            // Блок 3A
+            var block3AContent = new GameContent
+            {
+                Text = "Блок 3A",
+                Options = new[]
+                {
+        new Option { Text = "9", NextBlock = "Block9" }
+    }
+            };
+            AddGameContent("Block3A", block3AContent);
+
+            // Блок 4
+            var block4Content = new GameContent
+            {
+                Text = "Блок 4",
+                Options = new[]
+                {
+        new Option { Text = "4A", NextBlock = "Block4A" },
+        new Option { Text = "4B", NextBlock = "Block4B" },
+        new Option { Text = "6", NextBlock = "Block6" }
+    }
+            };
+            AddGameContent("Block4", block4Content);
+
+            // Блок 4A
+            var block4AContent = new GameContent
+            {
+                Text = "Блок 4A",
+                Options = new[]
+                {
+        new Option { Text = "4B", NextBlock = "Block4B" },
+        new Option { Text = "6", NextBlock = "Block6" }
+    }
+            };
+            AddGameContent("Block4A", block4AContent);
+
+            // Блок 4B
+            var block4BContent = new GameContent
+            {
+                Text = "Блок 4B",
+                Options = new[]
+                {
+        new Option { Text = "4C", NextBlock = "Block4C" },
+        new Option { Text = "4D", NextBlock = "Block4D" },
+        new Option { Text = "6", NextBlock = "Block6" }
+    }
+            };
+            AddGameContent("Block4B", block4BContent);
+
+            // Блок 4C
+            var block4CContent = new GameContent
+            {
+                Text = "Блок 4C",
+                Options = new[]
+                {
+        new Option { Text = "6", NextBlock = "Block6" }
+    }
+            };
+            AddGameContent("Block4C", block4CContent);
+
+            // Блок 4D
+            var block4DContent = new GameContent
+            {
+                Text = "Блок 4D",
+                Options = new[]
+                {
+        new Option { Text = "6", NextBlock = "Block6" },
+        new Option { Text = "4E", NextBlock = "Block4E" },
+        new Option { Text = "NO CHOICE", NextBlock = "Block4D" }
+    }
+            };
+            AddGameContent("Block4D", block4DContent);
+
+            // Блок 5
+            var block5Content = new GameContent
+            {
+                Text = "Блок 5",
+                Options = new[]
+                {
+        new Option { Text = "5A", NextBlock = "Block5A" },
+        new Option { Text = "5B", NextBlock = "Block5B" }
+    }
+            };
+            AddGameContent("Block5", block5Content);
+
+            // Блок 5A
+            var block5AContent = new GameContent
+            {
+                Text = "Блок 5A",
+                Options = new[]
+                {
+        new Option { Text = "12", NextBlock = "Block12" },
+        new Option { Text = "NO CHOICE", NextBlock = "Block5A" }
+    }
+            };
+            AddGameContent("Block5A", block5AContent);
+
+            // Блок 6
+            var block6Content = new GameContent
+            {
+                Text = "Блок 6",
+                Options = new[]
+                {
+        new Option { Text = "6A", NextBlock = "Block6A" },
+        new Option { Text = "6B", NextBlock = "Block6B" },
+        new Option { Text = "9", NextBlock = "Block9" }
+    }
+            };
+            AddGameContent("Block6", block6Content);
+
+            // Блок 6A
+            var block6AContent = new GameContent
+            {
+                Text = "Блок 6A",
+                Options = new[]
+                {
+        new Option { Text = "9", NextBlock = "Block9" },
+        new Option { Text = "6C", NextBlock = "Block6C" }
+    }
+            };
+            AddGameContent("Block6A", block6AContent);
+
+            // Блок 6B
+            var block6BContent = new GameContent
+            {
+                Text = "Блок 6B",
+                Options = new[]
+                {
+        new Option { Text = "NO CHOICE", NextBlock = "Block6B" }
+    }
+            };
+            AddGameContent("Block6B", block6BContent);
+
+            // Блок 6C
+            var block6CContent = new GameContent
+            {
+                Text = "Блок 6C",
+                Options = new[]
+                {
+        new Option { Text = "17", NextBlock = "Block17" }
+    }
+            };
+            AddGameContent("Block6C", block6CContent);
+
+            // Блок 7
+            var block7Content = new GameContent
+            {
+                Text = "Блок 7",
+                Options = new[]
+                {
+        new Option { Text = "7A", NextBlock = "Block7A" },
+        new Option { Text = "7C", NextBlock = "Block7C" }
+    }
+            };
+            AddGameContent("Block7", block7Content);
+
+            // Блок 7A
+            var block7AContent = new GameContent
+            {
+                Text = "Блок 7A",
+                Options = new[]
+                {
+        new Option { Text = "7B", NextBlock = "Block7B" },
+        new Option { Text = "7C", NextBlock = "Block7C" }
+    }
+            };
+            AddGameContent("Block7A", block7AContent);
+
+            // Блок 7B
+            var block7BContent = new GameContent
+            {
+                Text = "Блок 7B",
+                Options = new[]
+                {
+        new Option { Text = "7C", NextBlock = "Block7C" }
+    }
+            };
+            AddGameContent("Block7B", block7BContent);
+
+            // Блок 7C
+            var block7CContent = new GameContent
+            {
+                Text = "Блок 7C",
+                Options = new[]
+                {
+        new Option { Text = "14", NextBlock = "Block14" }
+    }
+            };
+            AddGameContent("Block7C", block7CContent);
+
+            // Блок 8
+            var block8Content = new GameContent
+            {
+                Text = "Блок 8",
+                Options = new[]
+                {
+        new Option { Text = "8A", NextBlock = "Block8A" },
+        new Option { Text = "2", NextBlock = "Block2" },
+        new Option { Text = "15", NextBlock = "Block15" }
+    }
+            };
+            AddGameContent("Block8", block8Content);
+
+            // Блок 8A
+            var block8AContent = new GameContent
+            {
+                Text = "Блок 8A",
+                Options = new[]
+                {
+        new Option { Text = "8B", NextBlock = "Block8B" },
+        new Option { Text = "8C", NextBlock = "Block8C" }
+    }
+            };
+            AddGameContent("Block8A", block8AContent);
+
+            // Блок 8B
+            var block8BContent = new GameContent
+            {
+                Text = "Блок 8B",
+                Options = new[]
+                {
+        new Option { Text = "NO CHOICE", NextBlock = "Block8B" }
+    }
+            };
+            AddGameContent("Block8B", block8BContent);
+
+            // Блок 8C
+            var block8CContent = new GameContent
+            {
+                Text = "Блок 8C",
+                Options = new[]
+                {
+        new Option { Text = "2", NextBlock = "Block2" },
+        new Option { Text = "15", NextBlock = "Block15" }
+    }
+            };
+            AddGameContent("Block8C", block8CContent);
+
+            // Блок 9
+            var block9Content = new GameContent
+            {
+                Text = "Блок 9",
+                Options = new[]
+                {
+        new Option { Text = "9A", NextBlock = "Block9A" },
+        new Option { Text = "9B", NextBlock = "Block9B" }
+    }
+            };
+            AddGameContent("Block9", block9Content);
+
+            // Блок 9A
+            var block9AContent = new GameContent
+            {
+                Text = "Блок 9A",
+                Options = new[]
+                {
+        new Option { Text = "3", NextBlock = "Block3" }
+    }
+            };
+            AddGameContent("Block9A", block9AContent);
+
+            // Блок 9B
+            var block9BContent = new GameContent
+            {
+                Text = "Блок 9B",
+                Options = new[]
+                {
+        new Option { Text = "NO CHOICE", NextBlock = "Block9B" }
+    }
+            };
+            AddGameContent("Block9B", block9BContent);
+
+            // Блок 10
+            var block10Content = new GameContent
+            {
+                Text = "Блок 10",
+                Options = new[]
+                {
+        new Option { Text = "10A", NextBlock = "Block10A" },
+        new Option { Text = "10B", NextBlock = "Block10B" }
+    }
+            };
+            AddGameContent("Block10", block10Content);
+
+            // Блок 10A
+            var block10AContent = new GameContent
+            {
+                Text = "Блок 10A",
+                Options = new[]
+                {
+        new Option { Text = "16", NextBlock = "Block16" },
+        new Option { Text = "5", NextBlock = "Block5" }
+    }
+            };
+            AddGameContent("Block10A", block10AContent);
+
+            // Блок 10B
+            var block10BContent = new GameContent
+            {
+                Text = "Блок 10B",
+                Options = new[]
+                {
+        new Option { Text = "10A", NextBlock = "Block10A" }
+    }
+            };
+            AddGameContent("Block10B", block10BContent);
+
+            // Блок 11
+            var block11Content = new GameContent
+            {
+                Text = "Блок 11",
+                Options = new[]
+                {
+        new Option { Text = "11A", NextBlock = "Block11A" },
+        new Option { Text = "11B", NextBlock = "Block11B" }
+    }
+            };
+            AddGameContent("Block11", block11Content);
+
+            // Блок 11A
+            var block11AContent = new GameContent
+            {
+                Text = "Блок 11A",
+                Options = new[]
+                {
+        new Option { Text = "5", NextBlock = "Block5" }
+    }
+            };
+            AddGameContent("Block11A", block11AContent);
+
+            // Блок 11B
+            var block11BContent = new GameContent
+            {
+                Text = "Блок 11B",
+                Options = new[]
+                {
+        new Option { Text = "18", NextBlock = "Block18" }
+    }
+            };
+            AddGameContent("Block11B", block11BContent);
+
+            // Блок 12
+            var block12Content = new GameContent
+            {
+                Text = "Блок 12",
+                Options = new[]
+                {
+        new Option { Text = "12A", NextBlock = "Block12A" },
+        new Option { Text = "12C", NextBlock = "Block12C" }
+    }
+            };
+            AddGameContent("Block12", block12Content);
+
+            // Блок 12A
+            var block12AContent = new GameContent
+            {
+                Text = "Блок 12A",
+                Options = new[]
+                {
+        new Option { Text = "12B", NextBlock = "Block12B" },
+        new Option { Text = "12D", NextBlock = "Block12D" }
+    }
+            };
+            AddGameContent("Block12A", block12AContent);
+
+            // Блок 12B
+            var block12BContent = new GameContent
+            {
+                Text = "Блок 12B",
+                Options = new[]
+                {
+        new Option { Text = "13", NextBlock = "Block13" }
+    }
+            };
+            AddGameContent("Block12B", block12BContent);
+
+            // Блок 12D
+            var block12DContent = new GameContent
+            {
+                Text = "Блок 12D",
+                Options = new[]
+                {
+        new Option { Text = "12C", NextBlock = "Block12C" }
+    }
+            };
+            AddGameContent("Block12D", block12DContent);
+
+            // Блок 13
+            var block13Content = new GameContent
+            {
+                Text = "Блок 13",
+                Options = new[]
+                {
+        new Option { Text = "13A", NextBlock = "Block13A" },
+        new Option { Text = "13B", NextBlock = "Block13B" }
+    }
+            };
+            AddGameContent("Block13", block13Content);
+
+            // Блок 13A
+            var block13AContent = new GameContent
+            {
+                Text = "Блок 13A",
+                Options = new[]
+                {
+        new Option { Text = "20", NextBlock = "Block20" }
+    }
+            };
+            AddGameContent("Block13A", block13AContent);
+
+            // Блок 14
+            var block14Content = new GameContent
+            {
+                Text = "Блок 14",
+                Options = new[]
+                {
+        new Option { Text = "14A", NextBlock = "Block14A" },
+        new Option { Text = "14B", NextBlock = "Block14B" }
+    }
+            };
+            AddGameContent("Block14", block14Content);
+
+            // Блок 14A
+            var block14AContent = new GameContent
+            {
+                Text = "Блок 14A",
+                Options = new[]
+                {
+        new Option { Text = "14C", NextBlock = "Block14C" }
+    }
+            };
+            AddGameContent("Block14A", block14AContent);
+
+            // Блок 14B
+            var block14BContent = new GameContent
+            {
+                Text = "Блок 14B",
+                Options = new[]
+                {
+        new Option { Text = "14A", NextBlock = "Block14A" }
+    }
+            };
+            AddGameContent("Block14B", block14BContent);
+
+            // Блок 14C
+            var block14CContent = new GameContent
+            {
+                Text = "Блок 14C",
+                Options = new[]
+                {
+        new Option { Text = "19", NextBlock = "Block19" },
+        new Option { Text = "4", NextBlock = "Block4" }
+    }
+            };
+            AddGameContent("Block14C", block14CContent);
+
+            // Блок 15
+            var block15Content = new GameContent
+            {
+                Text = "Блок 15",
+                Options = new[]
+                {
+        new Option { Text = "15A", NextBlock = "Block15A" },
+        new Option { Text = "15B", NextBlock = "Block15B" }
+    }
+            };
+            AddGameContent("Block15", block15Content);
+
+            // Блок 15A
+            var block15AContent = new GameContent
+            {
+                Text = "Блок 15A",
+                Options = new[]
+                {
+        new Option { Text = "2", NextBlock = "Block2" }
+    }
+            };
+            AddGameContent("Block15A", block15AContent);
+
+            // Блок 15B
+            var block15BContent = new GameContent
+            {
+                Text = "Блок 15B",
+                Options = new[]
+                {
+        new Option { Text = "2", NextBlock = "Block2" }
+    }
+            };
+            AddGameContent("Block15B", block15BContent);
+
+            // Блок 16
+            var block16Content = new GameContent
+            {
+                Text = "Блок 16",
+                Options = new[]
+                {
+        new Option { Text = "16A", NextBlock = "Block16A" }
+    }
+            };
+            AddGameContent("Block16", block16Content);
+
+            // Блок 16A
+            var block16AContent = new GameContent
+            {
+                Text = "Блок 16A",
+                Options = new[]
+                {
+        new Option { Text = "5", NextBlock = "Block5" }
+    }
+            };
+            AddGameContent("Block16A", block16AContent);
+
+            // Блок 17
+            var block17Content = new GameContent
+            {
+                Text = "Блок 17",
+                Options = new[]
+                {
+        new Option { Text = "17A", NextBlock = "Block17A" },
+        new Option { Text = "17B", NextBlock = "Block17B" }
+    }
+            };
+            AddGameContent("Block17", block17Content);
+
+            // Блок 17A
+            var block17AContent = new GameContent
+            {
+                Text = "Блок 17A",
+                Options = new[]
+                {
+        new Option { Text = "9", NextBlock = "Block9" }
+    }
+            };
+            AddGameContent("Block17A", block17AContent);
+
+            // Блок 17B
+            var block17BContent = new GameContent
+            {
+                Text = "Блок 17B",
+                Options = new[]
+                {
+        new Option { Text = "3", NextBlock = "Block3" }
+    }
+            };
+            AddGameContent("Block17B", block17BContent);
+
+            // Блок 18
+            var block18Content = new GameContent
+            {
+                Text = "Блок 18",
+                Options = new[]
+                {
+        new Option { Text = "18A", NextBlock = "Block18A" },
+        new Option { Text = "18B", NextBlock = "Block18B" }
+    }
+            };
+            AddGameContent("Block18", block18Content);
+
+            // Блок 18A
+            var block18AContent = new GameContent
+            {
+                Text = "Блок 18A",
+                Options = new[]
+                {
+        new Option { Text = "18C", NextBlock = "Block18C" }
+    }
+            };
+            AddGameContent("Block18A", block18AContent);
+
+            // Блок 18B
+            var block18BContent = new GameContent
+            {
+                Text = "Блок 18B",
+                Options = new[]
+                {
+        new Option { Text = "18D", NextBlock = "Block18D" }
+    }
+            };
+            AddGameContent("Block18B", block18BContent);
+
+            // Блок 18C
+            var block18CContent = new GameContent
+            {
+                Text = "Блок 18C",
+                Options = new[]
+                {
+        new Option { Text = "10", NextBlock = "Block10" },
+        new Option { Text = "18D", NextBlock = "Block18D" }
+    }
+            };
+            AddGameContent("Block18C", block18CContent);
+
+            // Блок 18D
+            var block18DContent = new GameContent
+            {
+                Text = "Блок 18D",
+                Options = new[]
+                {
+        new Option { Text = "NO CHOICE", NextBlock = "Block18D" }
+    }
+            };
+            AddGameContent("Block18D", block18DContent);
+
+            // Блок 19
+            var block19Content = new GameContent
+            {
+                Text = "Блок 19",
+                Options = new[]
+                {
+        new Option { Text = "19A", NextBlock = "Block19A" },
+        new Option { Text = "6", NextBlock = "Block6" },
+        new Option { Text = "4", NextBlock = "Block4" }
+    }
+            };
+            AddGameContent("Block19", block19Content);
+
+            // Блок 19A
+            var block19AContent = new GameContent
+            {
+                Text = "Блок 19A",
+                Options = new[]
+                {
+        new Option { Text = "19B", NextBlock = "Block19B" },
+        new Option { Text = "19C", NextBlock = "Block19C" }
+    }
+            };
+            AddGameContent("Block19A", block19AContent);
+
+            // Блок 19B
+            var block19BContent = new GameContent
+            {
+                Text = "Блок 19B",
+                Options = new[]
+                {
+        new Option { Text = "19C", NextBlock = "Block19C" }
+    }
+            };
+            AddGameContent("Block19B", block19BContent);
+
+            // Блок 19C
+            var block19CContent = new GameContent
+            {
+                Text = "Блок 19C",
+                Options = new[]
+                {
+        new Option { Text = "6", NextBlock = "Block6" },
+        new Option { Text = "4", NextBlock = "Block4" }
+    }
+            };
+            AddGameContent("Block19C", block19CContent);
+
+            // Блок 20
+            var block20Content = new GameContent
+            {
+                Text = "Блок 20",
+                Options = new[]
+                {
+        new Option { Text = "20A", NextBlock = "Block20A" },
+        new Option { Text = "20B", NextBlock = "Block20B" }
+    }
+            };
+            AddGameContent("Block20", block20Content);
+
+            // Блок 20A
+            var block20AContent = new GameContent
+            {
+                Text = "Блок 20A",
+                Options = new[]
+                {
+        new Option { Text = "20C", NextBlock = "Block20C" }
+    }
+            };
+            AddGameContent("Block20A", block20AContent);
+
+            // Блок 20C
+            var block20CContent = new GameContent
+            {
+                Text = "Блок 20C",
+                Options = new[]
+                {
+        new Option { Text = "21", NextBlock = "Block21" }
+    }
+            };
+            AddGameContent("Block20C", block20CContent);
+
+            // Блок 21
+            var block21Content = new GameContent
+            {
+                Text = "Блок 21",
+                Options = new[]
+                {
+        new Option { Text = "22", NextBlock = "Block22" }
+    }
+            };
+            AddGameContent("Block21", block21Content);
+
+            // Блок 22
+            var block22Content = new GameContent
+            {
+                Text = "Блок 22",
+                Options = new[]
+                {
+        new Option { Text = "23", NextBlock = "Block23" }
+    }
+            };
+            AddGameContent("Block22", block22Content);
+
+            // Блок 23
+            var block23Content = new GameContent
+            {
+                Text = "Блок 23",
+                Options = new[]
+                {
+                 new Option { Text = "NO CHOICE", NextBlock = "Block23" }
+    }
+            };
+            AddGameContent("Block23", block23Content);
+
+
         }
 
         public void AddGameContent(string blockId, GameContent gameContent)
