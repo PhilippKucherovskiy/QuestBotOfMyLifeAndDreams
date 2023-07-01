@@ -20,7 +20,7 @@ namespace QuestBotOfMyLifeAndDreams
         private InlineController _inlineController;
         private TextMessageController _textMessageController;
         private DefaultMessageController _defaultMessageController;
-        private GameController _gameController;
+
         private GameDictionary _gameDictionary;
 
         public Bot(
@@ -28,14 +28,12 @@ namespace QuestBotOfMyLifeAndDreams
             InlineController inlineController,
             TextMessageController textMessageController,
             DefaultMessageController defaultMessageController,
-            GameController gameController,
             GameDictionary gameDictionary)
         {
             _telegramClient = telegramClient;
             _inlineController = inlineController;
             _textMessageController = textMessageController;
             _defaultMessageController = defaultMessageController;
-            _gameController = gameController;
             _gameDictionary = gameDictionary;
         }
 
@@ -52,33 +50,27 @@ namespace QuestBotOfMyLifeAndDreams
 
         async Task HandleUpdateAsync(ITelegramBotClient telegramClient, Update update, CancellationToken cancellationToken)
         {
-            // Обрабатываем нажатия на кнопки из Telegram Bot API: https://core.telegram.org/bots/api#callbackquery
+            // Handle callback queries
             if (update.Type == UpdateType.CallbackQuery)
             {
-                await _gameController.Handle(new Update
-                {
-                    CallbackQuery = update.CallbackQuery
-                });
-
-                return;
+                await _inlineController.Handle(update.CallbackQuery);
             }
-
-            // Обрабатываем входящие сообщения из Telegram Bot API: https://core.telegram.org/bots/api#message
-            if (update.Type == UpdateType.Message)
+            else if (update.Type == UpdateType.Message)
             {
-                switch (update.Message!.Type)
+                var message = update.Message;
+
+                // Handle text messages
+                if (message.Type == MessageType.Text)
                 {
-                    case MessageType.Text:
-                        
-                        await _textMessageController.Handle(update.Message);
-                        return;
-                    default:
-                        await _defaultMessageController.Handle(update.Message, cancellationToken);
-                        return;
+                    await _textMessageController.Handle(message);
+                }
+                else
+                {
+                    // Handle other types of messages
+                    await _defaultMessageController.Handle(message, cancellationToken);
                 }
             }
         }
-
 
         Task HandleErrorAsync(ITelegramBotClient botClient, Exception exception, CancellationToken cancellationToken)
         {
@@ -100,5 +92,4 @@ namespace QuestBotOfMyLifeAndDreams
             return Task.CompletedTask;
         }
     }
-
 }
