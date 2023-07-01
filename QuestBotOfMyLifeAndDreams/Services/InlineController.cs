@@ -60,6 +60,9 @@ namespace QuestBotOfMyLifeAndDreams.Controllers
                         replyMarkup: replyMarkup
                     );
                 }
+
+                // Удаляем первые кнопки
+                await _telegramClient.DeleteMessageAsync(_chatId, _previousMessageId - 1);
             }
             else
             {
@@ -83,9 +86,6 @@ namespace QuestBotOfMyLifeAndDreams.Controllers
             {
                 // Удаляем предыдущие кнопки
                 await _telegramClient.EditMessageReplyMarkupAsync(_chatId, _previousMessageId, replyMarkup: null);
-
-                // Удаляем первые кнопки
-                await _telegramClient.DeleteMessageAsync(_chatId, _previousMessageId - 1);
 
                 _previousMessageId = 0;
             }
