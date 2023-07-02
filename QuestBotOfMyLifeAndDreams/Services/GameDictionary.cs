@@ -1,6 +1,13 @@
 ﻿using System.Collections.Generic;
 using System.IO;
+using System.Net;
+using Telegram.Bot.Types.ReplyMarkups;
+using Telegram.Bot;
+using Telegram.Bot.Types.InlineQueryResults;
 using static System.Net.Mime.MediaTypeNames;
+using Telegram.Bot.Types;
+using Telegram.Bot.Types.Enums;
+using File = System.IO.File;
 
 namespace QuestBotOfMyLifeAndDreams.Services
 {
@@ -29,8 +36,7 @@ namespace QuestBotOfMyLifeAndDreams.Services
                 Text = File.ReadAllText(@"C:\Users\Admin\source\repos\QuestBotOfMyLifeAndDreams\Тексты\01.txt"),
                 Options = new[]
                 {
-                    new Option { Text = "Дальше", NextBlock = "Block02" },
-
+                    new Option { Text = "Дальше", NextBlock = "Block02" }
                 }
             };
             AddGameContent("Block01", block01Content);
@@ -46,14 +52,15 @@ namespace QuestBotOfMyLifeAndDreams.Services
             };
             AddGameContent("Block02", block02Content);
 
+            var imageUrl = new Uri("https://files.fm/u/r6qg8nvqm");
             var block03Content = new GameContent
             {
+                ImageUrl = imageUrl,
                 Text = File.ReadAllText(@"C:\Users\Admin\source\repos\QuestBotOfMyLifeAndDreams\Тексты\03.txt"),
                 Options = new[]
                 {
-                    new Option { Text = "Дальше", NextBlock = "Block04" },
-
-                }
+        new Option { Text = "Дальше", NextBlock = "Block04" },
+    }
             };
             AddGameContent("Block03", block03Content);
 
@@ -89,6 +96,7 @@ namespace QuestBotOfMyLifeAndDreams.Services
 
             var block07Content = new GameContent
             {
+                
                 Text = File.ReadAllText(@"C:\Users\Admin\source\repos\QuestBotOfMyLifeAndDreams\Тексты\07.txt"),
                 Options = new[]
                 {
@@ -994,11 +1002,17 @@ namespace QuestBotOfMyLifeAndDreams.Services
     {
         public string Text { get; set; }
         public Option[] Options { get; set; }
+        public Uri ImageUrl { get; set; }
+
+        
     }
+
 
     public class Option
     {
         public string Text { get; set; }
         public string NextBlock { get; set; }
     }
+    
+    
 }

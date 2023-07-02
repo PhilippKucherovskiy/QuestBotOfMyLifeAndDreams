@@ -4,6 +4,8 @@ using Telegram.Bot.Types;
 using Telegram.Bot.Types.ReplyMarkups;
 using QuestBotOfMyLifeAndDreams.Services;
 using System.Linq;
+using Telegram.Bots.Types;
+using InlineKeyboardMarkup = Telegram.Bot.Types.ReplyMarkups.InlineKeyboardMarkup;
 
 namespace QuestBotOfMyLifeAndDreams.Controllers
 {
@@ -20,7 +22,7 @@ namespace QuestBotOfMyLifeAndDreams.Controllers
             _currentBlockId = "StartBlock"; // Начальный блок игры
         }
 
-        public async Task Handle(Message message)
+        public async Task Handle(Telegram.Bot.Types.Message message)
         {
             if (message.Text == "/start")
             {
@@ -72,7 +74,25 @@ namespace QuestBotOfMyLifeAndDreams.Controllers
 
                 await _telegramClient.SendTextMessageAsync(chatId, "Choose an option:", replyMarkup: replyMarkup);
             }
+
+
+            if (gameContent.ImageUrl != null)
+            {
+                var photo = Telegram.Bot.Types.InputFile.FromUri(gameContent.ImageUrl);
+
+                await _telegramClient.SendPhotoAsync(
+                    chatId: chatId,
+                    photo: photo,
+                    parseMode: (Telegram.Bot.Types.Enums.ParseMode?)ParseMode.Html
+                );
+            }
+
+
+
         }
     }
-
 }
+
+
+
+

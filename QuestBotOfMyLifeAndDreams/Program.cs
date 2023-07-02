@@ -43,9 +43,6 @@ namespace QuestBotOfMyLifeAndDreams
             services.AddTransient<TextMessageController>();
             services.AddTransient<GameDictionary>();
             
-
-
-
             services.AddSingleton<ITelegramBotClient>(provider => new TelegramBotClient(appSettings.BotToken));
 
             services.AddHostedService<Bot>();
@@ -55,7 +52,7 @@ namespace QuestBotOfMyLifeAndDreams
         {
             return new AppSettings()
             {
-                BotToken = "6081836295:AAHbvbEt9_wBHULc7VEmGkXlY4gW5cW7coI"
+                BotToken = "5769725725:AAHOl-OktMukJ1eH1a5E4uADq-BC08fWYHk"
             };
         }
     }

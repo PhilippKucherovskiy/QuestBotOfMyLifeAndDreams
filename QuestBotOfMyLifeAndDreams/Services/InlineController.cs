@@ -27,6 +27,9 @@ namespace QuestBotOfMyLifeAndDreams.Controllers
             var blockId = callbackQuery.Data;
             var gameContent = _gameDictionary.GetGameContent(blockId);
 
+            // Удаляем предыдущие кнопки, текст и фото
+            await DeletePreviousContent();
+
             if (gameContent.Options != null && gameContent.Options.Length > 0)
             {
                 var replyMarkup = new InlineKeyboardMarkup(
@@ -35,40 +38,18 @@ namespace QuestBotOfMyLifeAndDreams.Controllers
                     )
                 );
 
-                // Удаляем предыдущие кнопки, если они были
-                await DeletePreviousButtons();
+                // Отправляем новое сообщение с текстом и кнопками
+                var message = await _telegramClient.SendTextMessageAsync(
+                    chatId: callbackQuery.Message.Chat.Id,
+                    text: gameContent.Text,
+                    replyMarkup: replyMarkup
+                );
 
-                if (_previousMessageId == 0)
-                {
-                    // Отправляем новое сообщение с текстом и кнопками
-                    var message = await _telegramClient.SendTextMessageAsync(
-                        chatId: callbackQuery.Message.Chat.Id,
-                        text: gameContent.Text,
-                        replyMarkup: replyMarkup
-                    );
-
-                    _chatId = message.Chat.Id;
-                    _previousMessageId = message.MessageId;
-                }
-                else
-                {
-                    // Редактируем предыдущее сообщение, заменяя кнопки
-                    await _telegramClient.EditMessageTextAsync(
-                        chatId: _chatId,
-                        messageId: _previousMessageId,
-                        text: gameContent.Text,
-                        replyMarkup: replyMarkup
-                    );
-                }
-
-                // Удаляем первые кнопки
-                await _telegramClient.DeleteMessageAsync(_chatId, _previousMessageId - 1);
+                _chatId = message.Chat.Id;
+                _previousMessageId = message.MessageId;
             }
             else
             {
-                // Удаляем предыдущие кнопки, если они были
-                await DeletePreviousButtons();
-
                 // Отправляем новое сообщение только с текстом
                 var message = await _telegramClient.SendTextMessageAsync(
                     chatId: callbackQuery.Message.Chat.Id,
@@ -78,17 +59,32 @@ namespace QuestBotOfMyLifeAndDreams.Controllers
                 _chatId = message.Chat.Id;
                 _previousMessageId = message.MessageId;
             }
+
+            if (gameContent.ImageUrl != null)
+            {
+                var photo = Telegram.Bot.Types.InputFile.FromUri(gameContent.ImageUrl);
+
+                await _telegramClient.SendPhotoAsync(
+                    chatId: _chatId,
+                    photo: photo,
+                    parseMode: Telegram.Bot.Types.Enums.ParseMode.Html
+                );
+            }
         }
 
-        private async Task DeletePreviousButtons()
+        private async Task DeletePreviousContent()
         {
             if (_previousMessageId != 0)
             {
                 // Удаляем предыдущие кнопки
                 await _telegramClient.EditMessageReplyMarkupAsync(_chatId, _previousMessageId, replyMarkup: null);
 
+                // Удаляем предыдущий текст
+                await _telegramClient.DeleteMessageAsync(_chatId, _previousMessageId);
+
                 _previousMessageId = 0;
             }
         }
+
     }
 }
