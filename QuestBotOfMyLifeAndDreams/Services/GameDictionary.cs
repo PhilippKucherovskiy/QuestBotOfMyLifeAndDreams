@@ -68,11 +68,10 @@ namespace QuestBotOfMyLifeAndDreams.Services
             };
             AddGameContent("Block03", block03Content);
 
-            var imageUrl04 = new Uri("https://files.fm/f/adf78hphx");
+            
     
                 var block04Content = new GameContent
             {
-                    ImageUrl = imageUrl04,
                     Text = File.ReadAllText(@"C:\Users\Admin\source\repos\QuestBotOfMyLifeAndDreams\Тексты\04.txt"),
                 Options = new[]
                 {
@@ -117,9 +116,11 @@ namespace QuestBotOfMyLifeAndDreams.Services
             AddGameContent("Block07", block07Content);
 
             // Блок 1 
+            var imageURL1 = new Uri("https://files.fm/f/w3sh2fyke");
             var block1Content = new GameContent
             {
                 Text = File.ReadAllText(@"C:\Users\Admin\source\repos\QuestBotOfMyLifeAndDreams\Тексты\1.txt"),
+                ImageUrl = imageURL1,
                 Options = new[]
                 {
                     new Option { Text = "Дать еды", NextBlock = "Block1A" },
@@ -152,8 +153,9 @@ namespace QuestBotOfMyLifeAndDreams.Services
             AddGameContent("Block1B", block1BContent);
 
             // Блок 1C
+            var imageUrl1C = new Uri("https://files.fm/f/8asmtq5hp");
             var block1CContent = new GameContent
-            {
+            {   ImageUrl = imageUrl1C,
                 Text = File.ReadAllText(@"C:\Users\Admin\source\repos\QuestBotOfMyLifeAndDreams\Тексты\1C.txt"),
                 Options = new[]
                 {
@@ -681,8 +683,10 @@ namespace QuestBotOfMyLifeAndDreams.Services
             AddGameContent("Block13B", block13BContent);
 
             // Блок 14
+            var imageUrl14 = new Uri("https://files.fm/f/gbqzmyyme");
             var block14Content = new GameContent
             {
+                ImageUrl = imageUrl14,
                 Text = File.ReadAllText(@"C:\Users\Admin\source\repos\QuestBotOfMyLifeAndDreams\Тексты\14.txt"),
                 Options = new[]
                 {
@@ -693,6 +697,7 @@ namespace QuestBotOfMyLifeAndDreams.Services
             AddGameContent("Block14", block14Content);
 
             // Блок 14A
+            
             var block14AContent = new GameContent
             {
                 Text = File.ReadAllText(@"C:\Users\Admin\source\repos\QuestBotOfMyLifeAndDreams\Тексты\14A.txt"),
