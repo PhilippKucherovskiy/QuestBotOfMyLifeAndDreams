@@ -64,9 +64,12 @@ namespace QuestBotOfMyLifeAndDreams.Services
             };
             AddGameContent("Block03", block03Content);
 
-            var block04Content = new GameContent
+            var imageUrl04 = new Uri("https://files.fm/f/adf78hphx");
+    
+                var block04Content = new GameContent
             {
-                Text = File.ReadAllText(@"C:\Users\Admin\source\repos\QuestBotOfMyLifeAndDreams\Тексты\04.txt"),
+                    ImageUrl = imageUrl04,
+                    Text = File.ReadAllText(@"C:\Users\Admin\source\repos\QuestBotOfMyLifeAndDreams\Тексты\04.txt"),
                 Options = new[]
                 {
                     new Option { Text = "Дальше", NextBlock = "Block05" }

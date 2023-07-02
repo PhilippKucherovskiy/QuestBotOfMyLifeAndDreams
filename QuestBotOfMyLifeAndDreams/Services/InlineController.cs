@@ -15,6 +15,8 @@ namespace QuestBotOfMyLifeAndDreams.Controllers
         private readonly GameDictionary _gameDictionary;
         private long _chatId;
         private int _previousMessageId;
+        private int _previousImageMessageId = 0;
+
 
         public InlineController(ITelegramBotClient telegramBotClient, GameDictionary gameDictionary)
         {
@@ -27,7 +29,7 @@ namespace QuestBotOfMyLifeAndDreams.Controllers
             var blockId = callbackQuery.Data;
             var gameContent = _gameDictionary.GetGameContent(blockId);
 
-            // Удаляем предыдущие кнопки, текст и фото
+            // Удаляем предыдущие кнопки, текcт
             await DeletePreviousContent();
 
             if (gameContent.Options != null && gameContent.Options.Length > 0)
@@ -48,28 +50,24 @@ namespace QuestBotOfMyLifeAndDreams.Controllers
                 _chatId = message.Chat.Id;
                 _previousMessageId = message.MessageId;
             }
-            else
+            
+            if (_previousImageMessageId != 0)
             {
-                // Отправляем новое сообщение только с текстом
-                var message = await _telegramClient.SendTextMessageAsync(
-                    chatId: callbackQuery.Message.Chat.Id,
-                    text: gameContent.Text
-                );
-
-                _chatId = message.Chat.Id;
-                _previousMessageId = message.MessageId;
+                await _telegramClient.DeleteMessageAsync(_chatId, _previousImageMessageId);
             }
+
 
             if (gameContent.ImageUrl != null)
             {
                 var photo = Telegram.Bot.Types.InputFile.FromUri(gameContent.ImageUrl);
-
-                await _telegramClient.SendPhotoAsync(
+                var message = await _telegramClient.SendPhotoAsync(
                     chatId: _chatId,
                     photo: photo,
                     parseMode: Telegram.Bot.Types.Enums.ParseMode.Html
                 );
+                _previousImageMessageId = message.MessageId;
             }
+
         }
 
         private async Task DeletePreviousContent()
@@ -88,3 +86,4 @@ namespace QuestBotOfMyLifeAndDreams.Controllers
 
     }
 }
+    
