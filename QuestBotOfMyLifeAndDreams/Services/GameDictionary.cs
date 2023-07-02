@@ -8,6 +8,9 @@ using static System.Net.Mime.MediaTypeNames;
 using Telegram.Bot.Types;
 using Telegram.Bot.Types.Enums;
 using File = System.IO.File;
+using Microsoft.VisualBasic;
+using Microsoft.Extensions.Configuration.EnvironmentVariables;
+using Microsoft.Extensions.Configuration;
 
 namespace QuestBotOfMyLifeAndDreams.Services
 {
@@ -30,10 +33,11 @@ namespace QuestBotOfMyLifeAndDreams.Services
             AddGameContent("StartBlock", startGameContent);
 
 
-
+            var image01 = new Uri("https://files.fm/f/6pm2snysn");
             var block01Content = new GameContent
             {
                 Text = File.ReadAllText(@"C:\Users\Admin\source\repos\QuestBotOfMyLifeAndDreams\Тексты\01.txt"),
+                ImageUrl = image01,
                 Options = new[]
                 {
                     new Option { Text = "Дальше", NextBlock = "Block02" }
@@ -52,10 +56,10 @@ namespace QuestBotOfMyLifeAndDreams.Services
             };
             AddGameContent("Block02", block02Content);
 
-            var imageUrl = new Uri("https://files.fm/u/r6qg8nvqm");
+            var imageUrl03 = new Uri("https://files.fm/u/r6qg8nvqm");
             var block03Content = new GameContent
             {
-                ImageUrl = imageUrl,
+                ImageUrl = imageUrl03,
                 Text = File.ReadAllText(@"C:\Users\Admin\source\repos\QuestBotOfMyLifeAndDreams\Тексты\03.txt"),
                 Options = new[]
                 {
@@ -77,8 +81,10 @@ namespace QuestBotOfMyLifeAndDreams.Services
             };
             AddGameContent("Block04", block04Content);
 
+            var imageUrl05 = new Uri("https://files.fm/f/cjfz7dnfu");
             var block05Content = new GameContent
             {
+                ImageUrl= imageUrl05,
                 Text = File.ReadAllText(@"C:\Users\Admin\source\repos\QuestBotOfMyLifeAndDreams\Тексты\05.txt"),
                 Options = new[]
                 {
@@ -97,9 +103,10 @@ namespace QuestBotOfMyLifeAndDreams.Services
             };
             AddGameContent("Block06", block06Content);
 
+            var imageUrl07 = new Uri("https://files.fm/f/twxs9gzjk");
             var block07Content = new GameContent
             {
-                
+                ImageUrl = imageUrl07,
                 Text = File.ReadAllText(@"C:\Users\Admin\source\repos\QuestBotOfMyLifeAndDreams\Тексты\07.txt"),
                 Options = new[]
                 {

@@ -51,15 +51,14 @@ namespace QuestBotOfMyLifeAndDreams.Controllers
                 _previousMessageId = message.MessageId;
             }
             
-            if (_previousImageMessageId != 0)
-            {
-                await _telegramClient.DeleteMessageAsync(_chatId, _previousImageMessageId);
-            }
 
 
             if (gameContent.ImageUrl != null)
             {
+                await DeletePreviousPhoto();
+
                 var photo = Telegram.Bot.Types.InputFile.FromUri(gameContent.ImageUrl);
+
                 var message = await _telegramClient.SendPhotoAsync(
                     chatId: _chatId,
                     photo: photo,
@@ -81,6 +80,16 @@ namespace QuestBotOfMyLifeAndDreams.Controllers
                 await _telegramClient.DeleteMessageAsync(_chatId, _previousMessageId);
 
                 _previousMessageId = 0;
+            }
+
+           
+        }
+        private async Task DeletePreviousPhoto()
+        {
+            if (_previousImageMessageId != 0)
+            {
+                await _telegramClient.DeleteMessageAsync(_chatId, _previousImageMessageId);
+                _previousImageMessageId = 0;
             }
         }
 
