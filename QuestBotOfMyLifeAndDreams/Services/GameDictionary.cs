@@ -42,7 +42,7 @@ namespace QuestBotOfMyLifeAndDreams.Services
                     
                 }
             };
-            AddGameContent("Block03", block03Content);
+            AddGameContent("Block03", block03Content); 
 
             var block04Content = new GameContent
             {
